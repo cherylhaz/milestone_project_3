@@ -11,12 +11,12 @@
 </head>
 <body>
     <header>
-<nav>
-            <div class="nav-wrapper header">
-                <a href="{{url_for('main_page')}}" class="brand-logo">Recipe Box</a>
+<nav >
+            <div class="nav-wrapper my_header">
+                <a href="{{url_for('main_page')}}" class="brand-logo title">Recipe Box</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href=""><i class="material-icons left">home</i>Home</a></li>
+                    <li><a href=""><i class="material-icons left header_icons">home</i>Home</a></li>
                     <li><a href=""><i class="material-icons left">add_box</i>Add Recipe</a></li>
                     <li><a href=""><i class="material-icons left">info</i>More Information</a></li>
                 </ul>
@@ -27,6 +27,9 @@
                 </ul>
             </div>
         </nav>
+        <div class="main_image">
+            <img src="https://static01.nyt.com/images/2020/03/03/well/physed-foods/physed-foods-mediumSquareAt3X.jpg" alt="Brunch overhead">
+        </div>
     </header>
      <div class="container">
      
@@ -34,8 +37,9 @@
     {% endblock %}
     </div>
     <footer>
-        <div class="footer">
-            <h6>&copy; <script>document.write(new Date().getFullYear())</script></h6>
+        <div>
+          <div class="footer_text"><h6>&copy; <script>document.write(new Date().getFullYear())</script></h6>
+          <h6>Eat Local Recipes</h6></div>
         </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
