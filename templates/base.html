@@ -16,27 +16,25 @@
                 <a href="{{url_for('main_page')}}" class="brand-logo title">Recipe Box</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href=""><i class="material-icons left header_icons">home</i>Home</a></li>
-                    <li><a href=""><i class="material-icons left">add_box</i>Add Recipe</a></li>
+                    <li><a href="{{url_for('main_page')}}"><i class="material-icons left header_icons">home</i>Home</a></li>
+                    <li><a href="{{url_for('add_recipe')}}"><i class="material-icons left">add_box</i>Add Recipe</a></li>
                     <li><a href=""><i class="material-icons left">info</i>More Information</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">New Task</a></li>
-                    <li><a href="">Manage Categories</a></li>
+                    <li><a href="{{url_for('main_page')}}">Home</a></li>
+                    <li><a href="{{url_for('add_recipe')}}">Add Recipe</a></li>
+                    <li><a href="">More Information</a></li>
                 </ul>
             </div>
         </nav>
-        <div class="col s6">
-        </div>
-        <div class="main_image col s6">
+
+        <div class="col s12 main_image ">
         <div class="row">
             <img src="https://static01.nyt.com/images/2020/03/03/well/physed-foods/physed-foods-mediumSquareAt3X.jpg" alt="Brunch overhead">
         </div>
         </div>
     </header>
      <div class="container">
-     
     {% block content%}
     {% endblock %}
     </div>
@@ -49,9 +47,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script>
-  $(document).ready(function() {
+        $(document).ready(function() {
             $(".button-collapse").sideNav();
+            $('select').formSelect();
         });
-  </script>
+    </script>
 </body>
 </html>
