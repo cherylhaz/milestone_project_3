@@ -8,9 +8,10 @@ if path.exists("env.py"):
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'recipe_box'
-app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
+app.config["MONGO_URI"] = os.environ.get('MONGO_URI')
 
 mongo = PyMongo(app)
+
 
 @app.route('/add_recipe')
 def add_recipe():
@@ -19,12 +20,13 @@ def add_recipe():
 
 @app.route('/')
 def main_page():
-    return render_template('index.html')
+    return render_template('index.html',
+    categories = mongo.db.categories.find())
 
 
 @app.route('/search_results')
 def search_results():
-    return render_template("search_results.html", recipes=mongo.db.recipies.find())
+    return render_template("search_results.html", recipes=mongo.db.recipes.find())
 
 
 if __name__ == '__main__':

@@ -1,9 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-
-{% for recipe in recipies%}
-    {{recipe.recipies.name}}
-    {{recipe.recipies.ingredients}}
-{% endfor%}
-
+<body>
+<div class="row">
+    <h3>Categories</h3>
+    <ul class="collapsible">
+        {% for category in categories %}
+            <li>
+            <div >
+                <div class="task_header">
+                    <strong>{{category.title}}</strong>
+                </div>
+            </div>
+            </li>
+{% endfor %}
+    </ul>
+</div>    
+</body>
 {% endblock %}
