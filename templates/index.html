@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 
-
+{% for recipe in recipies%}
+    {{recipe.recipies.name}}
+    {{recipe.recipies.ingredients}}
+{% endfor%}
 
 {% endblock %}
