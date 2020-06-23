@@ -7,19 +7,19 @@
     <form action="{{url_for('insert_recipe')}}" method="POST" class="col s12 add_recipe_form">
       <div class="row">
         <div class="input-field col s12">
-          <input placeholder="Placeholder" id="title" type="text" class="validate">
+          <input placeholder="Placeholder" id="title" name="title" type="text" class="validate">
           <label for="title">Recipe Title:</label>
         </div>
       </div>
         <div class="row">
         <div class="input-field col s12">
-          <input id="ingredients" type="text" class="validate">
+          <input id="ingredients" name="indredients" type="text" class="validate">
           <label for="ingredients">Ingredients:</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="method" type="text" class="validate">
+          <input id="method" name="method" type="text" class="validate">
           <label for="method">Method:</label>
         </div>
       </div>
@@ -36,9 +36,15 @@
       </div>
     <div class="row">
         <div class="input-field col s6">
-          <input id="source" type="text" class="validate">
+          <input id="source" name="source" type="text" class="validate">
           <label for="source">Source:</label>
         </div>
+       
+        <div class="input-field col s12">
+          <input id="cooking_time" name="cooking_time" type="text" class="validate">
+          <label for="cooking_time">Cooking Time:</label>
+        </div>
+        <div class="row">
         <div class="file-field input-field">
             <div class="btn form_buttons">
                 <span>Upload an image: </span>
@@ -48,6 +54,7 @@
                 <input class="file-path validate" type="text">
             </div>
             </div>
+    </div>
     </div>
     <div class="row">
         <div class="input-field col s6">

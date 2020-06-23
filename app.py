@@ -22,12 +22,20 @@ def search_results():
     return render_template("search_results.html", recipes=mongo.db.recipes.find())
 
 
-#adds new task to database
+#Add New Recipe to Database
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipes = mongo.db.recipes
     recipes.insert_one(request.form.to_dict())
     return redirect(url_for('search_results')) 
+
+
+
+#Delete Recipe
+@app.route('/delete_recipe')
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
+    return redirect(url_for('search_results'))
 
 
 @app.route('/')
