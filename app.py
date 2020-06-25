@@ -40,7 +40,7 @@ def delete_recipe(recipe_id):
 
 @app.route('/')
 def main_page():
-    return render_template('index.html', categories=mongo.db.categories.find())
+    return render_template('index.html', categories=mongo.db.categories.find(),sub_categories=mongo.db.sub_categories.find())
 
 
 if __name__ == '__main__':

@@ -10,17 +10,19 @@
             <li>
                 <div class="category_title col s6">
                     <h3>{{category.title}}</h3>
+                    <form>
                     <div class="row">
                         <div class="input-field">
-                            <select>
-                                <option value="" disabled selected>Choose your option</option>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
+                            <select class="select1">
+                            <option value="" disabled selected>Choose your option</option>
+                                {% for sub_category in sub_categories %}
+                                    <option value="{{sub_category.title}}">{{sub_category.title}}</option>
+                               {% endfor %}
                             </select>
-                            <label>Materialize Select</label>
+                            <label>Sub-Category</label>
                         </div>
                     </div>
+                    </form>
                 </div>
             
             </li>
