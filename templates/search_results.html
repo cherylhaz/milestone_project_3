@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <body>
+
 <ul class="collapsible">
     {% for recipe in recipes %}
     <li>
@@ -10,23 +11,28 @@
 
       </div>
       <div class="col s9">
-        <strong>{{recipe.title}}</strong>
+        <h4><strong>{{recipe.title}}</strong></h4>
       </div>
-      
       
       </div>
       <div class="collapsible-body">
-        <span>
-            {{recipe.ingredients}}
-            {{recipe.required_tools}}
-            {{recipe.method}}
-            {{recipe.cooking_time}}
-            {{recipe.category}}
-            {{recipe.sub_category}}
-        </span>
-      <span>        
+        <div>
+
+            <h5>Ingredients: </h5><p>{{recipe.ingredients}}</p>
+            <br>
+            <h5>Required Tools: </h5><p>{{recipe.required_tools}}</p>
+            <br>
+            <h5>Cooking Time: </h5><p>{{recipe.cooking_time}}</p>
+            <br>
+            <h5>Method: </h5><p>{{recipe.method}}</p>
+            <br>
+            <h5>Category </h5><p>{{recipe.category}}</p>
+            <h5>Sub-category: </h5><p>{{recipe.sub_category}}</p>
+        </div>
+      <span>    
+      <a href="" class="waves-effect waves-light btn btn_small form_buttons">Edit</a>    
         <a href="" class="waves-effect waves-light btn btn_small form_buttons">Delete</a>
-        <a href="" class="waves-effect waves-light btn btn_small form_buttons">Edit</a>
+        
       </span>
       </div>
     </li>

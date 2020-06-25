@@ -1,0 +1,21 @@
+        {% extends 'base.html' %}
+        {% block content %}
+        <h3>Thank you for your submission,  use the edit or delete button below to make changes.</h3>
+        <div>
+            <h4><strong>{{recipe.title}}</strong></h4>
+            <h5>Ingredients: </h5><p>{{recipe.ingredients}}</p>
+            <br>
+            <h5>Required Tools: </h5><p>{{recipe.required_tools}}</p>
+            <br>
+            <h5>Cooking Time: </h5><p>{{recipe.cooking_time}}</p>
+            <br>
+            <h5>Method: </h5><p>{{recipe.method}}</p>
+            <br>
+            <h5>Category </h5><p>{{recipe.category}}</p>
+            <h5>Sub-category: </h5><p>{{recipe.sub_category}}</p>
+        </div>
+        <span>    
+        <a href="" class="waves-effect waves-light btn btn_small form_buttons">Edit</a>    
+        <a href="" class="waves-effect waves-light btn btn_small form_buttons">Delete</a>
+      </span>
+     {% endblock %}
