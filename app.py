@@ -15,14 +15,15 @@ mongo = PyMongo(app)
 
 @app.route('/add_recipe')
 def add_recipe():
-    return render_template('add_recipe.html', categories=mongo.db.categories.find(),sub_categories=mongo.db.sub_categories.find(),required_tools=mongo.db.required_tools.find() )
+    return render_template('add_recipe.html', categories=mongo.db.categories.find(), sub_categories=mongo.db.sub_categories.find(), required_tools=mongo.db.required_tools.find())
+
 
 @app.route('/search_results')
 def search_results():
     return render_template("search_results.html", recipes=mongo.db.recipes.find())
 
 
-#Add New Recipe to Database
+# Add New Recipe to Database
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipes = mongo.db.recipes
@@ -30,15 +31,17 @@ def insert_recipe():
     return redirect(url_for('submitted')) 
 
 
-#Delete Recipe
+# Delete Recipe
 @app.route('/delete_recipe')
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('search_results'))
 
+
 @app.route('/submitted')
 def submitted():
-    return render_template("submission.html", recipes=mongo.db.recipes.find())
+    return render_template("submission.html")
+
 
 @app.route('/')
 def main_page():
