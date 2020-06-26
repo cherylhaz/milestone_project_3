@@ -41,7 +41,14 @@ footer {
 }
 
 .category_picture {
-    width: 100%;
+    height: 300px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.category_picture img {
+    width:  400px;
+    height: auto;
 }
 
 /** Form **/

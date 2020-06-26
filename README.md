@@ -66,6 +66,8 @@ The photos used in this site were obtained from ...
 
 ### Acknowledgements
 Design inspiration came from: 
-
 https://www.awwwards.com/sites/outdoor-dreams
+
+Images used are from: 
+https://unsplash.com/
 
