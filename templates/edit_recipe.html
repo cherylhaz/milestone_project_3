@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h3>Edit</h3>
+    <form action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="title" name="title" type="text" class="validate" value="{{recipe.title}}">
+                <label for="title">Recipe Title:</label>
+            </div>
+        </div>
+    </form>
+{% endblock %}
