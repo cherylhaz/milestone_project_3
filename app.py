@@ -1,6 +1,7 @@
 import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
+from bson.objectid import ObjectId
 
 from os import path
 if path.exists("env.py"):
@@ -32,7 +33,7 @@ def insert_recipe():
 
 
 # Delete Recipe
-@app.route('/delete_recipe')
+@app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('search_results'))
@@ -41,6 +42,11 @@ def delete_recipe(recipe_id):
 @app.route('/submitted')
 def submitted():
     return render_template("submission.html")
+
+
+@app.route('/more_info')
+def more_info():
+    return render_template("more_information.html")
 
 
 @app.route('/')
