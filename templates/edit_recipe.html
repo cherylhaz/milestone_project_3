@@ -1,12 +1,71 @@
 {% extends 'base.html' %}
 {% block content %}
     <h3>Edit</h3>
-    <form action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
+    <form action="{{ url_for('edit_recipe', recipe_id=recipe._id)}}" methods="POST" class="col s12">
         <div class="row">
             <div class="input-field col s12">
                 <input id="title" name="title" type="text" class="validate" value="{{recipe.title}}">
                 <label for="title">Recipe Title:</label>
             </div>
         </div>
+        <div class="row">
+        <div class="input-field col s12">
+          <input id="ingredients" name="indredients" type="text" class="validate" value="{{recipe.ingredients}}">
+          <label for="ingredients">Ingredients:</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="method" name="method" type="text" class="validate" value="{{recipe.method}}">
+          <label for="method">Method:</label>
+        </div>
+      </div>
+           <div class="row">
+         <div class="input-field">
+                            <select id="required_tools" name="required_tools" class="select1" multiple value="{{recipe.required_tools}}">
+                            <option value="" disabled selected>Choose all that apply</option>
+                                {% for tool in required_tools %}
+                                    <option value="{{tool.name}}">{{tool.name}}</option>
+                               {% endfor %}
+                            </select>
+                            <label>Required Tools:</label>
+                        </div>
+      </div>
+    <div class="row">
+        <div class="input-field col s6">
+          <input id="source" name="source" type="text" class="validate" value="{{recipe.source}}">
+          <label for="source">Source:</label>
+        </div>
+       </div>
+        <div class="input-field col s12">
+          <input id="cooking_time" name="cooking_time" type="text" class="validate" value="{{recipe.cooking_time}}">
+          <label for="cooking_time">Cooking Time:</label>
+        </div>
+
+    <div class="row">
+        <div class="input-field">
+            <select class="select1" id="category" name="category" multiple value="{{recipe.category}}">
+                <option value="" disabled selected>Choose all that apply:</option>
+                {% for category in categories %}
+                     <option value="{{category.title}}">{{category.title}}</option>
+                {% endfor %}
+            </select>
+            <label>Category</label>
+        </div>
+         <div class="input-field">
+                            <select class="select1" id="sub_category" name="sub_category" value="{{recipe.sub_category}}">
+                            <option value="" disabled selected>Choose most suitable option: </option>
+                                {% for sub_category in sub_categories %}
+                                    <option value="{{sub_category.title}}">{{sub_category.title}}</option>
+                               {% endfor %}
+                            </select>
+                            <label>Main Ingredient:</label>
+                        </div>
+    </div>
+<div class="row">
+    <button class="btn waves-effect waves-light form_buttons " id="add_button" type="submit" name="action">Update
+    <i class="material-icons right">send</i>
+  </button>
+  </div>
     </form>
 {% endblock %}
