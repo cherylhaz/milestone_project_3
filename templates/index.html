@@ -1,63 +1,55 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <div class="container">
     <ul>
-        {% for category in categories %}
-            {% if loop.index % 2 != 0 %}
-                <div class="row" >
-                <div class="container col s6 category_picture">
-                    <img src="{{category.image_url}}" alt="Image showing category">
-                </div>
+        {% for category in categories %} 
+        {% if loop.index % 2 != 0 %}
+        <div class="row">
+            <div class="container col s6 category_picture">
+                <img src="{{category.image_url}}" alt="Image showing category" />
+            </div>
             <li>
                 <div class="category_title col s6">
                     <h3>{{category.title}}</h3>
-                    <form>
-                    <div class="row">
-                        <form >
-                        <div class="input-field">
-                            <select class="select1">
-                            <option value="" disabled selected>Choose your option</option>
-                                {% for sub_category in sub_categories %}
-                                    <option value="{{sub_category.title}}">{{sub_category.title}}</option>
-                               {% endfor %}
-                            </select>
-                            <label><p>Sub-Category</p></label>
+                        <div class="row">
+                            <form>
+                                <div class="input-field">
+                                    <select class="select1">
+                                        <option value="" disabled selected>Choose your option</option>
+                                        {% for sub_category in sub_categories %}
+                                        <option value="{{sub_category.title}}">{{sub_category.title}}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </form>
                         </div>
-                        </form>
-                    </div>
-                    </form>
                 </div>
-            
             </li>
-                </div>
-            {% else %}
-                        <div class="row" >
-
+        </div>
+        {% else %}
+        <div class="row">
+            <li>
                 <div class="category_title col s6">
                     <h3>{{category.title}}</h3>
-                    <form>
-                    <div class="row">
-                        <form >
-                        <div class="input-field">
-                            <select class="select1">
-                            <option value="" disabled selected>Choose your option</option>
-                                {% for sub_category in sub_categories %}
-                                    <option value="{{sub_category.title}}">{{sub_category.title}}</option>
-                               {% endfor %}
-                            </select>
-                            <label><p></p></label>
+                        <div class="row">
+                            <form>
+                                <div class="input-field">
+                                    <select class="select1">
+                                        <option value="" disabled selected>Choose your option</option>
+                                        {% for sub_category in sub_categories %}
+                                        <option value="{{sub_category.title}}">{{sub_category.title}}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </form>
                         </div>
-                        </form>
-                    </div>
-                    </form>
                 </div>
-            
-                            <div class="container col s6 category_picture">
-                    <img src="{{category.image_url}}" alt="Image showing category">
-                </div>
-            {% endif %}
+            </li>
+            <div class="container col s6 category_picture">
+                <img src="{{category.image_url}}" alt="Image showing category" />
             </div>
-{% endfor %}
+            {% endif %}
+        </div>
+        {% endfor %}
     </ul>
-</div>   
+</div>
 {% endblock %}

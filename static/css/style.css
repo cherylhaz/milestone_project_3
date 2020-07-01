@@ -29,8 +29,6 @@ background-image: url("../images/background1.jpg");
 .text {
     
     font-family: 'Poppins', sans-serif;
-    
-    letter-spacing: 3px;
     width: 800px;
     height: 400px;
 
@@ -53,6 +51,7 @@ background-image: url("../images/background1.jpg");
     text-transform: uppercase;
     font-weight: bold;
     font-size: 9em;
+    letter-spacing: 7px;
 }
 
 /** Footer **/
