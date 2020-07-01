@@ -1,8 +1,14 @@
 # Recipe Box
 
-One or two paragraphs providing an overview of your project.
+The Recipe Box site is an easy to use online portal to store your favourite recipes.  Many people, myself included, have numerous cookbooks that
+we keep for just one or two recipes along with old handwritten pieces of paper with recipes handed down from other people. Storing this information in our 
+kitchens adds to clutter and it can be difficult to find something when you are looking for it.  This site offers a solution to input the recipes you have on hand
+and store them for easy access.
 
-Essentially, this part is your sales pitch.
+Online recipes have seen an explosiion of growth the past number of years as bloogers aided by Pinterest and Instagram contine to share recipes 
+and many people have begun online collections which are easy to use and find what you are looking for.  The old favourites which are stored on hard copies
+can be impossible to integrate into this system as most people don't have their own blog or website where they can share them.  This site aims to solve this problem 
+and will enable everyone to store their recipes electronically, saving time, space and frustration.  
 
 ## UX
 Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
@@ -20,17 +26,32 @@ Feature 1 - allows users X to achieve Y, by having them fill out Z
 ...
 For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
 
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
-Another feature idea
+Future enhancements will include: 
+1.  User log in and personalized experience
+2.  Greater search capability, including search by keywords, ingredients, cooking time
+3.  Sharing tools so recipes could be shared on Pinterest or other social media sites
+4.  Links to sites to purchase required tools or ingredients to support revenue stream for site owner. 
 
 ## Technologies Used
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+**[HTML](https://html.spec.whatwg.org/multipage/)**
+  The basic structure and display page was created using HTML.
 
-### JQuery
-The project uses JQuery to simplify DOM manipulation.
-Testing
+**[CSS](https://www.w3.org/Style/CSS/Overview.en.html)**
+  Design and enhancement of user experience was done with CSS to make it a site that is both easy to read and navigate. 
+
+**[JavaScript](http://www.ecmascript.org/)**
+  Used to provide the search, map and display functionality.
+
+**[JQuery](https://jquery.com/)**
+  Used to simplify the code in places and to simplify DOM movements.
+
+**[Materalize](https://materializecss.com/)**
+
+**[MongoDB](https://www.mongodb.com/)**
+
+## Testing
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
@@ -60,14 +81,14 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 ## Credits
 ### Content
-The text for section Y was copied from the Wikipedia article Z
+Sources of Recipes are listed as a database field, all other written content is original work. 
+
 ### Media
-The photos used in this site were obtained from ...
+Images used are from:  https://unsplash.com/
 
 ### Acknowledgements
 Design inspiration came from: 
 https://www.awwwards.com/sites/outdoor-dreams
 
-Images used are from: 
-https://unsplash.com/
+
 
