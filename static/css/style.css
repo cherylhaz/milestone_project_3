@@ -14,6 +14,7 @@ nav .title {
     margin-right: 2px;
 }
 
+/** Hero Image **/
 .main_image {
 background-image: url("../images/background1.jpg"); 
   background-color: #f57c00; 
@@ -21,6 +22,37 @@ background-image: url("../images/background1.jpg");
   background-position: center;
   background-repeat: no-repeat; 
   background-size: cover;
+  align-content: center;
+  position: relative;
+}
+
+.text {
+    
+    font-family: 'Poppins', sans-serif;
+    
+    letter-spacing: 3px;
+    width: 800px;
+    height: 400px;
+
+    background-color: rgba(56, 142, 60, 0.6);
+    align-content: center;
+    margin: 0 auto;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+}
+
+.text h1, h4 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.text h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 9em;
 }
 
 /** Footer **/
