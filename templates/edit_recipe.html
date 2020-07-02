@@ -63,9 +63,7 @@
                         </div>
     </div>
 <div class="row">
-    <button class="btn waves-effect waves-light form_buttons " id="add_button" type="submit" name="action">Update
-    <i class="material-icons right">send</i>
-  </button>
+<a href="{{url_for('submitted', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small form_buttons">Update</a>   
   </div>
     </form>
 {% endblock %}
