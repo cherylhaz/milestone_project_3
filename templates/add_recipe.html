@@ -7,19 +7,19 @@
     <form action="{{url_for('insert_recipe')}}" method="POST" class="col s12 add_recipe_form">
       <div class="row">
         <div class="input-field col s12">
-          <input id="title" name="title" type="text" class="validate">
+          <input id="title" name="title" type="text" class="validate" required>
           <label for="title">Recipe Title:</label>
         </div>
       </div>
         <div class="row">
         <div class="input-field col s12">
-          <input id="ingredients" name="ingredients" type="text" class="validate">
+          <input id="ingredients" name="ingredients" type="text" class="validate" required>
           <label for="ingredients">Ingredients:</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="method" name="method" type="text" class="validate">
+          <input id="method" name="method" type="text" class="validate" required>
           <label for="method">Method:</label>
         </div>
       </div>
@@ -58,7 +58,7 @@
     </div>
     <div class="row">
         <div class="input-field">
-            <select class="select1" id="category" name="category" multiple>
+            <select class="select1" id="category" name="category" multiple required>
                 <option value="" disabled selected>Choose all that apply:</option>
                 {% for category in categories %}
                      <option value="{{category.title}}">{{category.title}}</option>
@@ -67,7 +67,7 @@
             <label>Category</label>
         </div>
          <div class="input-field">
-                            <select class="select1" id="sub_category" name="sub_category" >
+                            <select class="select1" id="sub_category" name="sub_category" required>
                             <option value="" disabled selected>Choose most suitable option: </option>
                                 {% for sub_category in sub_categories %}
                                     <option value="{{sub_category.title}}">{{sub_category.title}}</option>
