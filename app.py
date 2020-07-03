@@ -29,7 +29,7 @@ def search_results():
 def insert_recipe():
     recipes = mongo.db.recipes
     recipes.insert_one(request.form.to_dict())
-    return redirect(url_for('submitted')) 
+    return redirect(url_for('submitted'))
 
 
 # Delete Recipe
@@ -48,8 +48,25 @@ def edit_recipe(recipe_id):
     all_required_tools = mongo.db.required_tools.find()
     return render_template('edit_recipe.html', recipe=the_recipe,
                            categories=all_categories,
-                           sub_categories = all_sub_categories,
-                           required_tools = all_required_tools)
+                           sub_categories=all_sub_categories,
+                           required_tools=all_required_tools)
+
+
+@app.route('/update_recipe/<recipe_id>', methods=['POST'])
+def update_recipe(recipe_id):
+    recipes = mongo.db.recipes
+    recipes.update({'_id': ObjectId(recipe_id)},
+                    {
+                        'title': request.form.get('title'),
+                        'ingredients': request.form.get('ingredients'),
+                        'method': request.form.get('method'),
+                        'required_tools': request.form.get('required_tools'),
+                        'source': request.form.get('source'),
+                        'cooking_time': request.form.get('cooking_time'),
+                        'category': request.form.get('category'),
+                        'sub_category': request.form.get('sub_category')
+                    })
+    return redirect(url_for('search_results'))
 
 
 @app.route('/submitted')
@@ -64,7 +81,7 @@ def more_info():
 
 @app.route('/')
 def main_page():
-    return render_template('index.html', categories=mongo.db.categories.find(),sub_categories=mongo.db.sub_categories.find())
+    return render_template('index.html', categories=mongo.db.categories.find(), sub_categories=mongo.db.sub_categories.find())
 
 
 if __name__ == '__main__':
