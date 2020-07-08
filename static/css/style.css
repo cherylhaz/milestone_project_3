@@ -99,8 +99,6 @@ footer {
 .category_picture img {
     padding: 0;
     display:  flex;
-    
-    
 }
 
 .category_row {
@@ -131,4 +129,12 @@ footer {
 
 .recipe_title h4 {
       color: #f57c00;
+}
+
+/** Edit Page **/
+#edit_title h3 {
+    color: #f57c00;
+    font-family: 'Poppins', sans-serif;
+    font-size: large;
+    text-align: center;
 }

@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
+    <div class="container-fluid" id="edit_title">
     <h3>Edit</h3>
+    </div>
     <form action="{{ url_for('update_recipe', recipe_id=recipe._id)}}" method="POST" class="col s12">
         <div class="row">
             <div class="input-field col s12">
@@ -63,7 +65,9 @@
                         </div>
     </div>
 <div class="row">
- <button class="btn waves-effect waves-light" type="submit" name="action">Update
+ <button class="btn waves-effect waves-light form_buttons" type="submit" name="action">Update
+  </button>
+   <button class="btn waves-effect waves-light form_buttons" type="button" action="{{url_for('search_results')}}">Cancel
   </button>
   </div>
     </form>
