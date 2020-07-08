@@ -12,15 +12,19 @@
                 <span class="category_title" >
                     <h3>{{category.title}}</h3>
                     </span>
-                            <form>
+                            <form action="{{url_for('search_results')}}" method="GET" class="">
                                 <div class="input-field">
-                                    <select class="select1">
+                                    <select  class="select1">
                                         <option value="" disabled selected>Choose your option</option>
                                         {% for sub_category in sub_categories %}
-                                            <option value="{{sub_category.title}}">{{sub_category.title}}</option>
+                                            <option value="{{sub_category.title}}" name="{{sub_category.title}}" id="{{sub_category.title}}">{{sub_category.title}}</option>
                                         {% endfor %}
                                     </select>
-                                </div>
+                                
+                                <button  class="btn waves-effect waves-light form_buttons " type="submit" id="add_button"  name="action">Go!
+    <i class="material-icons right">send</i>
+  </button>
+  </div>
                             </form>
                             
                 </div>

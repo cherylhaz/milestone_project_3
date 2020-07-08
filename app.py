@@ -15,7 +15,7 @@ mongo = PyMongo(app)
 
 
 # Search Results
-@app.route('/search_results')
+@app.route('/search_results/')
 def search_results():
     return render_template("search_results.html", recipes=mongo.db.recipes.find())
 
