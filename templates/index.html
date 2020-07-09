@@ -1,57 +1,30 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container-fluid">
     <ul>
-        {% for category in categories %} 
-        {% if loop.index % 2 != 0 %}
-        <div class="row category_row">
-            <div class="col-sm-6 category_picture category_picture_left">
-                <img src="{{category.image_url}}" alt="Image showing category" />
-            </div>
-        
-                <div class="col-sm-6">
-                <span class="category_title" >
-                    <h3>{{category.title}}</h3>
-                    </span>
-                            <form action="{{url_for('search_results')}}" method="GET" class="">
+     <form action="{{url_for('search_results')}}" method="GET" class="">
                                 <div class="input-field">
                                     <select  class="select1">
                                         <option value="" disabled selected>Choose your option</option>
+                                        
+                                        {% for category in categories %}
+                                            <option value="{{category.title}}" name="selected_category" id="selected_category">{{category.title}}</option>
+                                        {% endfor %}
+                    
+                                    </select>
+  </div>
+                                <div class="input-field">
+                                    <select  class="select1">
+                                        <option value="" disabled selected>Choose your option</option>
+                                        
                                         {% for sub_category in sub_categories %}
                                             <option value="{{sub_category.title}}" name="selected_sub_category" id="selected_sub_category">{{sub_category.title}}</option>
                                         {% endfor %}
                                     </select>
-                                
                                 <button  class="btn waves-effect waves-light form_buttons " type="submit" id="add_button"  name="action">Go!
     <i class="material-icons right">send</i>
   </button>
   </div>
                             </form>
-                            
-                </div>
-        </div>
-        {% else %}
-        <div class="row category_row">
-                <div class="col-sm-6">
-                <span class="category_title left_category_title">
-                    <h3>{{category.title}}</h3>
-                    </span>
-                            <form>
-                                <div class="input-field">
-                                    <select class="select1">
-                                        <option value="" disabled selected>Choose your option</option>
-                                        {% for sub_category in sub_categories %}
-                                            <option value="{{sub_category.title}}">{{sub_category.title}}</option>
-                                        {% endfor %}
-                                    </select>
-                                </div>
-                            </form>
-                </div>
-            <div class="col-sm-6 category_picture">
-                <img src="{{category.image_url}}" alt="Image showing category" />
-            </div>
-            </div>
-            {% endif %}
-        {% endfor %}
     </ul>
 </div>
 {% endblock %}
