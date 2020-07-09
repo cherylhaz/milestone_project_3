@@ -34,18 +34,16 @@ background-image: url("../images/background1.jpg");
 }
 
 .text {
-    
     font-family: 'Poppins', sans-serif;
-    width: 800px;
-    height: 400px;
+    max-width: 800px;
+    max-height: 400px;
     background-color: rgba(56, 142, 60, 0.6);
     align-content: center;
     margin: 0 auto;
     position: absolute;
-  top: 50%;
-  left: 50%;
-  
-  transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .text h1, h4 {
@@ -117,6 +115,8 @@ footer {
     font-size: large;
 }
 
+/** Buttons **/
+
 .form_buttons {
     background-color: #f57c00;
 }
@@ -132,9 +132,15 @@ footer {
 }
 
 /** Edit Page **/
-#edit_title h3 {
+#edit_title {
     color: #f57c00;
     font-family: 'Poppins', sans-serif;
-    font-size: large;
     text-align: center;
+}
+
+/** Submission Page **/
+.submission {
+    text-align: center;
+    margin-top: 5em;
+    margin-bottom: 5em;
 }

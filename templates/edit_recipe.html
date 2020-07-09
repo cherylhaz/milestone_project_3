@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class="container-fluid" id="edit_title">
-    <h3>Edit</h3>
+    <h1>Edit</h1>
     </div>
     <form action="{{ url_for('update_recipe', recipe_id=recipe._id)}}" method="POST" class="col s12">
         <div class="row">
@@ -56,7 +56,7 @@
         </div>
          <div class="input-field">
                             <select class="select1" id="sub_category" name="sub_category" value="{{recipe.sub_category}}">
-                            <option value="" disabled selected>Choose most suitable option: </option>
+                            <option value="{{recipe.sub_category}}" disabled selected>Choose most suitable option: </option>
                                 {% for sub_category in sub_categories %}
                                     <option value="{{sub_category.title}}">{{sub_category.title}}</option>
                                {% endfor %}
@@ -67,8 +67,10 @@
 <div class="row">
  <button class="btn waves-effect waves-light form_buttons" type="submit" name="action">Update
   </button>
-   <button class="btn waves-effect waves-light form_buttons" type="button" action="{{url_for('search_results')}}">Cancel
-  </button>
   </div>
     </form>
+    <form action="{{url_for('search_results')}}">
+    <button class="btn waves-effect waves-light form_buttons" type="submit" action="{{url_for('search_results')}}">Cancel
+  </button>
+  </form>
 {% endblock %}

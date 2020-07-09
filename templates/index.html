@@ -17,7 +17,7 @@
                                     <select  class="select1">
                                         <option value="" disabled selected>Choose your option</option>
                                         {% for sub_category in sub_categories %}
-                                            <option value="{{sub_category.title}}" name="{{sub_category.title}}" id="{{sub_category.title}}">{{sub_category.title}}</option>
+                                            <option value="{{sub_category.title}}" name="selected_sub_category" id="selected_sub_category">{{sub_category.title}}</option>
                                         {% endfor %}
                                     </select>
                                 
