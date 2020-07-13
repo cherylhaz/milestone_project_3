@@ -3,7 +3,8 @@
 <body>
 
 <ul class="collapsible">
-    {% for recipe in recipes %}
+{% for recipe in recipes %}
+    {% if recipe.category == selected_category %}
     <li>
         <div class="collapsible-header">
             <div>
@@ -34,7 +35,11 @@
             </span>
       </div>
     </li>
-{% endfor %}
+    
+        {% else %}
+            <p>No results were found, please search again.</p>
+        {% endif %}
+    {% endfor %}
 </ul>
 </body>
 {% endblock %}

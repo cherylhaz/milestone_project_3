@@ -19,7 +19,7 @@ mongo = PyMongo(app)
 def search_results():
     selected_category=mongo.db.categories
     selected_sub_category=mongo.db.sub_categories
-    return render_template("search_results.html", selected_category.find_one({'title': ObjectId(selected_category)}))
+    return render_template("search_results.html", recipes=mongo.db.recipes.find())
 
 
 # Add New Recipe to Database
