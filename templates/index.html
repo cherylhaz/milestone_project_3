@@ -1,15 +1,25 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container-fluid">
     <ul>
+    <!-- Example single danger button -->
+    <form action="{{url_for('search_results')}}" methods="GET">
+<div class="btn-group">
+  <button type="button" name="selected_category" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Action
+  </button>
+  <div class="dropdown-menu">
+  {% for category in categories %}
+    <a class="dropdown-item" href="">{{category.title}}</a>
+    {% endfor %}
+</div>
+</form>
      <form action="{{url_for('search_results')}}" methods="GET" class="">
                                 <div class="input-field">
-                                    <select  name="selected_category" class="select1">
+                                    <select name="selected_category"  class="select1">
                                         <option value="" disabled selected>Choose your option</option>
-                                        
                                         {% for category in categories %}
-                                            <option value="{{category.title}}" id="selected_category">{{category.title}}</option>
+                                            <option value="{{category.title}}" id="selected_category" >{{category.title}}</option>
                                         {% endfor %}
-                    
                                     </select>
   </div>
                                 <div class="input-field">
