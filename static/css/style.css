@@ -58,7 +58,9 @@ background-image: url("../images/background1.jpg");
 footer {
     background-color: #388e3c;
     line-height: 50px;
-    
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .footer_text {

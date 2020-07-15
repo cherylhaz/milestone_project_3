@@ -12,29 +12,14 @@
     <a class="dropdown-item" href="{{category.slug}}">{{category.title}}</a>
     {% endfor %}
 </div>
-
-     <form action="{{url_for('search_results')}}" methods="GET" class="">
-                                <div class="input-field">
-                                    <select name="selected_category"  class="select1">
-                                        <option value="" disabled selected>Choose your option</option>
-                                        {% for category in categories %}
-                                            <option value="{{category.title}}" id="selected_category" >{{category.title}}</option>
-                                        {% endfor %}
-                                    </select>
-  </div>
-                                <div class="input-field">
-                                    <select  name="selected_sub_category" class="select1">
-                                        <option value="" disabled selected>Choose your option</option>
-                                        
-                                        {% for sub_category in sub_categories %}
-                                            <option value="{{sub_category.title}}" id="selected_sub_category">{{sub_category.title}}</option>
-                                        {% endfor %}
-                                    </select>
-                                <button  class="btn waves-effect waves-light form_buttons " type="submit" id="add_button" >Go!
-    <i class="material-icons right">send</i>
+<div class="btn-group">
+  <button type="button" name="selected_category" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Choose a Main-Ingredient:
   </button>
-  </div>
-                            </form>
-    </ul>
+  <div class="dropdown-menu">
+  {% for sub_category in sub_categories %}
+    <a class="dropdown-item" href="">{{sub_category.title}}</a>
+    {% endfor %}
+</div>
 </div>
 {% endblock %}
