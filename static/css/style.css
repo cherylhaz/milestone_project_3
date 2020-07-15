@@ -11,10 +11,6 @@ nav .title {
     padding-left: 20px;
 }
 
-.my_header i {
-    padding: 0;
-    margin-right: 2px;
-}
 
 .my_header a:hover {
     color: #f57c00;
@@ -54,7 +50,7 @@ background-image: url("../images/background1.jpg");
 .text h1 {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 9em;
+    font-size: 440%;
     letter-spacing: 7px;
 }
 
