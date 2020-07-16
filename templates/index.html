@@ -4,16 +4,16 @@
     <!-- Example single danger button -->
     
 <div class="btn-group">
-  <button type="button" name="selected_category" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" name="selected_category" id="selected_category" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Choose a Category
   </button>
   <div class="dropdown-menu">
   {% for category in categories %}
-    <a class="dropdown-item" href="{{category.slug}}">{{category.title}}</a>
+    <a class="dropdown-item" id="selected_category" href="{{url_for('search_results')}}">{{category.title}}</a>
     {% endfor %}
 </div>
 <div class="btn-group">
-  <button type="button" name="selected_category" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" name="" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Choose a Main-Ingredient:
   </button>
   <div class="dropdown-menu">
