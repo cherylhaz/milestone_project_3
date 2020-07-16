@@ -4,14 +4,20 @@
     <!-- Example single danger button -->
     
 <div class="btn-group">
-  <button type="button" name="selected_category" id="selected_category" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Choose a Category
+<form name="selected_category" action="{{url_for('search_results')}}">
+<div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option id="Main Course" value="Main Course">Main Course</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <button class="btn waves-effect waves-light form_buttons" type="submit">Go
   </button>
-  <div class="dropdown-menu">
-  {% for category in categories %}
-    <a class="dropdown-item" id="selected_category" href="{{url_for('search_results')}}">{{category.title}}</a>
-    {% endfor %}
-</div>
+</form>
 <div class="btn-group">
   <button type="button" name="" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Choose a Main-Ingredient:
