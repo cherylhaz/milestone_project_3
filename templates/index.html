@@ -4,10 +4,10 @@
     <!-- Example single danger button -->
     
 <div class="btn-group">
-<form name="selected_category" action="{{url_for('search_results')}}">
+<form  name="input" action="{{url_for('search_results')}}" method="GET">
 <div class="form-group">
     <label for="exampleFormControlSelect1">Example select</label>
-    <select class="form-control" id="exampleFormControlSelect1">
+    <select class="form-control" name="selected_category" id="exampleFormControlSelect1">
       <option id="Main Course" value="Main Course">Main Course</option>
       <option>2</option>
       <option>3</option>
