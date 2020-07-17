@@ -5,27 +5,26 @@
     
 <div class="btn-group">
 <form  name="input" action="{{url_for('search_results')}}" method="GET">
+<!-- Main Button Category-->
 <div class="form-group">
-    <label for="exampleFormControlSelect1">Example select</label>
-    <select class="form-control" name="selected_category" id="exampleFormControlSelect1">
-      <option id="Main Course" value="Main Course">Main Course</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+    <label for="selected_category">Select a category:</label>
+    <select class="form-control" name="selected_category" id="selected_category">
+        {% for category in categories %}
+            <option id="selected_category" value="{{category.title}}">{{category.title}}</option>
+        {% endfor %}
+    </select>
+  </div>
+  <!-- Secondary Button Sub-Category-->
+  <div class="form-group">
+    <label for="selected_sub_category">Select a Main Ingredient</label>
+    <select class="form-control" name="selected_category" id="selected_sub_category">
+        {% for sub_category in sub_categories %}
+            <option id="selected_sub_category" value="{{sub_category.title}}">{{sub_category.title}}</option>
+        {% endfor %}
     </select>
   </div>
   <button class="btn waves-effect waves-light form_buttons" type="submit">Go
   </button>
 </form>
-<div class="btn-group">
-  <button type="button" name="" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Choose a Main-Ingredient:
-  </button>
-  <div class="dropdown-menu">
-  {% for sub_category in sub_categories %}
-    <a class="dropdown-item" href="">{{sub_category.title}}</a>
-    {% endfor %}
-</div>
-</div>
+
 {% endblock %}
