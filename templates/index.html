@@ -10,7 +10,7 @@
     <label for="selected_category">Select a category:</label>
     <select class="form-control" name="selected_category" id="selected_category">
         {% for category in categories %}
-            <option id="selected_category" value="{{category.title}}">{{category.title}}</option>
+            <option value="{{category.title}}">{{category.title}}</option>
         {% endfor %}
     </select>
   </div>
