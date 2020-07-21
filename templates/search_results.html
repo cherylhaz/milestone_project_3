@@ -2,9 +2,10 @@
 {% block content %}
 <body>
 {% if recipes.length == 0 %}
-    <p> No results were found for ((selected_category)), please choose a different category</p>
+    <div class="container-fluid">
+        <p> No results were found, please choose a different category</p>
+    </div>
 {% else %}
-
 {% for recipe in recipes %}
     <div class="accordion" id="accordionExample">
   <div class="card">

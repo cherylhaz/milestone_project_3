@@ -17,8 +17,8 @@ mongo = PyMongo(app)
 # Search Results
 @app.route('/search_results', methods=['GET', 'POST'])
 def search_results():
-    selected_category2 = "Main Course"
-    return render_template("search_results.html", recipes=mongo.db.recipes.find({'category': selected_category2}))
+    results = mongo.db.recipes.find({'category': request.form.get('selected_category')})
+    return render_template("search_results.html", recipes=results)
 
 
 # Add New Recipe to Database

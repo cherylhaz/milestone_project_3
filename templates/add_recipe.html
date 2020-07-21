@@ -5,7 +5,7 @@
 <!--Form -->
 <div class="container-fluid">
 <form action="{{url_for('insert_recipe')}}" method="POST" class="add_recipe_form">
-  <div class="form-group">
+  <div class="form-group col">
   <label for="title">Recipe Title:</label>
             <input id="title" name="title" type="text" class="validate" required>   
   </div>
@@ -17,6 +17,7 @@
 <label for="method">Method:</label>
             <textarea id="method" name="method" type="text" class="validate" required rows="3"></textarea>
           </div>
+          
   <div class="form-group">
     <label for="required_tools">Required Tools:</label>
         <select multiple id="required_tools" name="required_tools" class="form-control" multiple>   
@@ -26,6 +27,7 @@
                 {% endfor %}
      </select>
   </div>
+  <div class="row">
 <div class="form-group">
     <label for="source">Source:</label>
     <input id="source" name="source" type="text" class="validate">
@@ -33,6 +35,7 @@
 <div class="form-group">
     <label for="cooking_time">Cooking Time:</label>
     <input id="cooking_time" name="cooking_time" type="text" class="validate">     
+</div>
 </div>
   <div class="form-group">
   <label>Category</label>
