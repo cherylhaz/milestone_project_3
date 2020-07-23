@@ -4,7 +4,7 @@
     <!-- Example single danger button -->
     
 <div class="btn-group">
-<form  name="input" action="{{url_for('search_results')}}" method="GET">
+<form  name="selected_category" action="{{url_for('search_results')}}" method="POST">
 <!-- Main Button Category-->
 <div class="form-group">
     <label for="selected_category">Select a category:</label>
@@ -24,7 +24,7 @@
     </select>
   </div>
   -->
-  <button class="btn waves-effect waves-light form_buttons" type="submit">Go
+  <button class="btn waves-effect waves-light form_buttons" type="submit" name="selected_category">Go
   </button>
 </form>
 

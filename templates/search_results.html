@@ -1,11 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
 <body>
-{% if recipes.length == 0 %}
-    <div class="container-fluid">
-        <p> No results were found, please choose a different category</p>
-    </div>
-{% else %}
 {% for recipe in recipes %}
     <div class="accordion" id="accordionExample">
   <div class="card">
@@ -41,6 +36,6 @@
   </div>
 </div>
     {% endfor %}
-{% endif %}
+
 </body>
 {% endblock %}
