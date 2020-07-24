@@ -132,6 +132,7 @@ textarea {
 
 .form_buttons {
     background-color: #f57c00;
+    margin: 10px;
 }
 
 .form_buttons:hover {
@@ -140,6 +141,11 @@ textarea {
 
 #button_add_page {
     justify-content: center;
+    margin: auto;
+}
+
+#buttons_edit_page {
+        justify-content: center;
     margin: auto;
 
 }
