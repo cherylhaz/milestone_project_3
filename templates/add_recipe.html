@@ -5,26 +5,30 @@
 <!--Form -->
 <div class="container-fluid">
 <form action="{{url_for('insert_recipe')}}" method="POST" class="add_recipe_form">
-  <div class="col">
+  <div class="row">
+  <div class="col-md-6">
   <div class="form-group">
   <label for="title">Recipe Title:</label>
             <input id="title" name="title" type="text" class="validate" required>   
   </div>
   </div>
-  <div class="row">
+  
   <div class="col-md-6">
     <div class="form-group">
     <label for="ingredients">Ingredients:</label>
            <input id="ingredients" name="ingredients" type="text" class="validate" required>
   </div>
   </div>
+  </div>
+  <div class="row">
   <div class="col-md-6">
 <div class="form-group">
 <label for="method">Method:</label>
             <textarea id="method" name="method" type="text" class="validate" required ></textarea>
           </div>
         </div> 
-        </div> 
+        
+        <div class="col-md-6">
   <div class="form-group">
     <label for="required_tools">Required Tools:</label>
         <select multiple id="required_tools" name="required_tools" class="form-control" multiple>   
@@ -34,6 +38,8 @@
                 {% endfor %}
      </select>
   </div>
+  </div>
+  </div> 
   <div class="row">
   <div class="col-md-6">
 <div class="form-group">
@@ -73,9 +79,13 @@
 </div>
 </div>
 </div>
+<div class="row">
+<div id="button_add_page">
     <button class="btn waves-effect waves-light form_buttons " id="add_button" type="submit" name="action">Add
     <i class="material-icons right">send</i>
   </button>
+</div>
+</div>
   </form>
   
   

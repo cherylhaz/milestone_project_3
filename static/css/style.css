@@ -111,6 +111,8 @@ footer {
 #add_recipe_title{
     color: #f57c00;
     text-align: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
 }
 
 .add_recipe_form label {
@@ -136,6 +138,12 @@ textarea {
     background-color: #bb4d00;
 }
 
+#button_add_page {
+    justify-content: center;
+    margin: auto;
+
+}
+
 /** Search Results **/
 
 .recipe_title h4 {
@@ -154,4 +162,12 @@ textarea {
     text-align: center;
     margin-top: 5em;
     margin-bottom: 5em;
+}
+
+/* Media Queries */
+
+@media(max-width: 600px) {
+    textarea {
+        min-width:200px; 
+        max-width:100%;
 }
