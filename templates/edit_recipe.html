@@ -4,38 +4,57 @@
     <h1>Edit</h1>
     </div>
     <form action="{{ url_for('update_recipe', recipe_id=recipe._id)}}" method="POST" class="col s12">
+            <div class="row">
+            <div class="col-md-6">
             <div class="form-group">
             <label for="title">Recipe Title:</label>
                 <input id="title" name="title" type="text" class="validate" value="{{recipe.title}}">
             </div>
+            </div>
+            <div class="col-md-6">
         <div class="form-group">
         <label for="ingredients">Ingredients:</label>
           <input id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}">
         </div>
-        <div class="form-gorup">
-        <label for="method">Method:</label>
-          <textarea id="method" name="method" type="text" class="validate" value="{{recipe.method}}"></textarea>
-          
         </div>
-         <div class="form-group">
-         <label>Required Tools:</label>
-                            <select id="required_tools" name="required_tools" class="select1" multiple value="{{recipe.required_tools}}">
-                            <option value="" disabled selected>Choose all that apply</option>
-                                {% for tool in required_tools %}
-                                    <option value="{{tool.name}}">{{tool.name}}</option>
-                               {% endfor %}
-                            </select>      
-                        </div>
+        
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-gorup">
+                    <label for="method">Method:</label>
+                    <textarea id="method" name="method" type="text" class="validate" value="{{recipe.method}}"></textarea>
+          
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Required Tools:</label>
+                    <select id="required_tools" name="required_tools" class="select1" multiple value="{{recipe.required_tools}}">
+                    <option value="" disabled selected>Choose all that apply</option>
+                    {% for tool in required_tools %}
+                        <option value="{{tool.name}}">{{tool.name}}</option>     
+                    {% endfor %}
+                    </select>      
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        <div class="col-md-6">
         <div class="form-group">
         <label for="source">Source:</label>
           <input id="source" name="source" type="text" class="validate" value="{{recipe.source}}">
           
         </div>
-        <div class="form-group">
-        <label for="cooking_time">Cooking Time:</label>
-          <input id="cooking_time" name="cooking_time" type="text" class="validate" value="{{recipe.cooking_time}}">
-          
         </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="cooking_time">Cooking Time:</label>
+                <input id="cooking_time" name="cooking_time" type="text" class="validate" value="{{recipe.cooking_time}}">
+            </div>
+        </div>
+        </div>
+        <div class="row">
         <div class="form-group">
         <label>Category</label>
             <select class="select1" id="category" name="category" multiple value="{{recipe.category}}">
@@ -54,6 +73,7 @@
                                     <option value="{{sub_category.title}}">{{sub_category.title}}</option>
                                {% endfor %}
                             </select>
+                        </div>
                         </div>
 <div class="row">
  <button class="btn waves-effect waves-light form_buttons" type="submit" name="action">Update

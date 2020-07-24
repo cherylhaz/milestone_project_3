@@ -155,7 +155,10 @@ textarea {
     color: #f57c00;
     font-family: 'Poppins', sans-serif;
     text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
+
 
 /** Submission Page **/
 .submission {
