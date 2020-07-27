@@ -90,5 +90,7 @@ Images used are from:  https://unsplash.com/
 Design inspiration came from: 
 https://www.awwwards.com/sites/outdoor-dreams
 
+Footer code was from 
+https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
 
 

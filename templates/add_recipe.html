@@ -58,8 +58,8 @@
 <div class="col-md-6">
   <div class="form-group">
   <label>Category</label>
-              <select multiple class="form-control" id="category" name="category" required>
-                <option value="" disabled selected>Choose all that apply:</option>
+              <select class="form-control" id="category" name="category" required>
+                <option value="" disabled selected>Choose most suitable option:</option>
                 {% for category in categories %}
                      <option value="{{category.title}}">{{category.title}}</option>
                 {% endfor %}

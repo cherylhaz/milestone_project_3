@@ -31,8 +31,8 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Required Tools:</label>
-                    <select id="required_tools" name="required_tools" class="select1" multiple value="{{recipe.required_tools}}">
-                    <option value="" disabled selected>Choose all that apply</option>
+                    <select id="required_tools" name="required_tools" class="select1"  value="{{recipe.required_tools}}">
+                    <option value="" disabled selected>{{recipe.required_tools}}</option>
                     {% for tool in required_tools %}
                         <option value="{{tool.name}}">{{tool.name}}</option>     
                     {% endfor %}
@@ -59,20 +59,19 @@
         <div class="col-md-6">
         <div class="form-group">
         <label>Category</label>
-            <select class="select1" id="category" name="category" multiple value="{{recipe.category}}">
-                <option value="" disabled selected>Choose all that apply:</option>
+            <select class="select1" id="category" name="category"  value="{{recipe.category}}">
+                <option value="" disabled selected>{{recipe.category}}</option>
                 {% for category in categories %}
                      <option value="{{category.title}}">{{category.title}}</option>
                 {% endfor %}
             </select>
-            
         </div>
         </div>
         <div class="col-md-6">
          <div class="form-group">
          <label>Main Ingredient:</label>
                             <select class="select1" id="sub_category" name="sub_category" value="{{recipe.sub_category}}">
-                            <option value="{{recipe.sub_category}}" disabled selected>Choose most suitable option: </option>
+                            <option value="{{recipe.sub_category}}" disabled selected> {{recipe.sub_category}}</option>
                                 {% for sub_category in sub_categories %}
                                     <option value="{{sub_category.title}}">{{sub_category.title}}</option>
                                {% endfor %}
@@ -84,7 +83,6 @@
     <div id="buttons_edit_page">
         <button class="btn waves-effect waves-light form_buttons" type="submit" name="action">Update
         </button>
-    
     </form>
     <form action="{{url_for('search_results')}}">
     <button class="btn waves-effect waves-light form_buttons" type="submit" action="{{url_for('search_results')}}">Cancel
