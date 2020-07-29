@@ -81,36 +81,26 @@ background-image: url("../images/background1.jpg");
 }
 
 /** Main Page Category Select Area **/
-.category_title h3 {
-    font-weight: bold;
-    padding-top: 3em;
-    padding-left: 20px;
-    
-}
 
-.left_category_title{
-    text-align: right;
-}
-.select1 {
-    padding-left: 20px;
-}
 
 .category_picture {
     overflow: hidden;
     padding: 0;
     margin: 0;
-    align-content: right;
-    
+    width: 100%;
 }
 
 .category_picture img {
     padding: 0;
     display:  flex;
+    margin: 0;
+    
 }
 
 .category_row {
     margin-top: 2em;
 }
+
 
 /** Form **/
 
