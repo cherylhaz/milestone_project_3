@@ -9,13 +9,13 @@
             <div class="col-md-6">
             <div class="form-group">
             <label for="title">Recipe Title:</label>
-                <input id="title" name="title" type="text" class="validate" value="{{recipe.title}}">
+                <input id="title" name="title" type="text" class="validate text_field" value="{{recipe.title}}">
             </div>
             </div>
             <div class="col-md-6">
         <div class="form-group">
         <label for="ingredients">Ingredients:</label>
-          <input id="ingredients" name="ingredients" type="text" class="validate" value="{{recipe.ingredients}}">
+          <input id="ingredients" name="ingredients" type="text" class="validate text_field" value="{{recipe.ingredients}}">
         </div>
         </div>
         
@@ -24,17 +24,17 @@
             <div class="col-md-6">
                 <div class="form-gorup">
                     <label for="method">Method:</label>
-                    <textarea id="method" name="method" type="text" class="validate" value="{{recipe.method}}"></textarea>
+                    <input id="method" name="method" class="validate text_field" value="{{recipe.method}}">
           
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Required Tools:</label>
-                    <select id="required_tools" name="required_tools" class="select1"  value="{{recipe.required_tools}}">
+                    <select id="required_tools" name="required_tools" class="select1">
                     <option value="" disabled selected>{{recipe.required_tools}}</option>
                     {% for tool in required_tools %}
-                        <option value="{{tool.name}}">{{tool.name}}</option>     
+                        <option id="{{tool.name}}">{{tool.name}}</option>     
                     {% endfor %}
                     </select>      
                 </div>
@@ -44,21 +44,21 @@
         <div class="col-md-6">
         <div class="form-group">
         <label for="source">Source:</label>
-          <input id="source" name="source" type="text" class="validate" value="{{recipe.source}}">
+          <input id="source" name="source" type="text" class="validate text_field" value="{{recipe.source}}">
           
         </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label for="cooking_time">Cooking Time:</label>
-                <input id="cooking_time" name="cooking_time" type="text" class="validate" value="{{recipe.cooking_time}}">
+                <input id="cooking_time" name="cooking_time" type="text" class="validate text_field" value="{{recipe.cooking_time}}">
             </div>
         </div>
         </div>
         <div class="row">
             <div class="col-md-6">
                 <p> Category: {{recipe.category}} </p>
-                    <button class="btn waves-effect waves-light form_buttons" type="button" data-toggle="modal" data-target="#category_modal">Change
+                    <button class="btn waves-effect waves-light form_buttons" type="button" data-toggle="modal" data-target="#category_modal">Edit
                     </button>
                 </div>
     <!--Category Modal -->
@@ -76,7 +76,7 @@
                                     <select class="select1" id="category" name="category"  value="{{recipe.category}}">
                                     <option value="" disabled selected>{{recipe.category}}</option>
                                     {% for category in categories %}
-                                        <option value="{{category.title}}">{{category.title}}</option>
+                                        <option id="{{category.title}}">{{category.title}}</option>
                                     {% endfor %}
                                     </select>
                             
@@ -91,7 +91,7 @@
             
         <div class="col-md-6">
             <span><p> Main Ingredient: {{recipe.sub_category}} </p></span>
-                <span><button class="btn waves-effect waves-light form_buttons" type="button" data-toggle="modal" data-target="#sub_category_modal">Change
+                <span><button class="btn waves-effect waves-light form_buttons" type="button" data-toggle="modal" data-target="#sub_category_modal">Edit
                 </button></span>
                 </div>
 <!-- Sub- Category Modal -->
@@ -99,7 +99,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Choose a Main Ingredient</h5>
+                            <h5 class="modal-title" id="sub_category_modal">Choose a Main Ingredient</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                             </button>
@@ -109,7 +109,7 @@
                                 <select class="select1" id="sub_category" name="sub_category" value="{{recipe.sub_category}}">
                                 <option value="{{recipe.sub_category}}" disabled selected> {{recipe.sub_category}}</option>
                                 {% for sub_category in sub_categories %}
-                                    <option value="{{sub_category.title}}">{{sub_category.title}}</option>
+                                    <option id="{{sub_category.title}}">{{sub_category.title}}</option>
                                 {% endfor %}
                                 </select>
                           
@@ -132,12 +132,12 @@
     </form>
     </div>
     <div class="container-fluid">  
-        <div class="row buttons_edit_page" 
-            <div class="col-md-12"
-                    <form action="{{url_for('main_page')}}">
-                        <button class="btn waves-effect waves-light form_buttons" type="submit">Cancel
-                        </button>
+        <div class="row buttons_edit_page">
+            <div class="col-md-12">
+                        <a class="btn waves-effect waves-light form_buttons" href="{{url_for('main_page')}}">Cancel
+                        </a
                     </form>
             </div>
         </div>
+    </div>
 {% endblock %}

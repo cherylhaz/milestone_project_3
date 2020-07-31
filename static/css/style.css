@@ -169,6 +169,9 @@ textarea {
     margin-bottom: 5em;
 }
 
+.text_field{
+    width: 100%;
+}
 /* Media Queries */
 
 @media(max-width: 600px) {
