@@ -172,6 +172,10 @@ textarea {
 .text_field{
     width: 100%;
 }
+
+div.panel.show {
+    display: block !important;
+}
 /* Media Queries */
 
 @media(max-width: 600px) {

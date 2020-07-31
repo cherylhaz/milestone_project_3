@@ -2,18 +2,18 @@
 {% block content %}
 <body>
 {% for recipe in recipes %}
-    <div class="accordion" id="accordionExample">
+    <div class="accordion" id="recipeAccordion">
   <div class="card">
     <div class="card-header" id="headingOne">
       <h2 class="mb-0">
         <button class="btn btn-link btn-block text-left recipe_title" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          <h4><strong>{{recipe.title}}</strong></h4>
+          <a href="" onclick="setClass();"> <h4><strong>{{recipe.title}}</strong></h4></a>
         </button>
       </h2>
     </div>
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body panel">
         <h5>Ingredients: </h5><p>{{recipe.ingredients}}</p>
                 <br>
                 <h5>Required Tools: </h5><p>{{recipe.required_tools}}</p>
