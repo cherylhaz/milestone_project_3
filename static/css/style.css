@@ -148,9 +148,16 @@ textarea {
 
 /** Search Results **/
 
+.recipe_title {
+    background-color: lightgrey;
+    margin-top: .75em;
+    margin-bottom: .75em;
+}
+
 .recipe_title h4 {
       color: #f57c00;
 }
+
 
 /** Edit Page **/
 #edit_title {
