@@ -17,8 +17,12 @@ mongo = PyMongo(app)
 # Search Results
 @app.route('/search_results', methods=['GET', 'POST'])
 def search_results():
-    return render_template("search_results.html", recipes=mongo.db.recipes.find({"category": request.form.get("selected_category")}))
-
+    result_number = mongo.db.recipes.count_documents({"category": request.form.get("selected_category")})
+    query=mongo.db.recipes.find({"category": request.form.get("selected_category")})
+    if result_number > 0:
+        return render_template("search_results.html", recipes=query)
+    else:
+        return render_template("no_results.html")
 
 # Add New Recipe to Database
 @app.route('/add_recipe')
