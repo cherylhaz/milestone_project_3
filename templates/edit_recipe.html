@@ -24,7 +24,7 @@
             <div class="col-md-6">
                 <div class="form-gorup">
                     <label for="method">Method:</label>
-                    <input id="method" name="method" class="validate text_field" value="{{recipe.method}}">
+                    <textarea id="method" name="method" class="validate text_field" value="{{recipe.method}}">{{recipe.method}}</textarea>
           
                 </div>
             </div>
@@ -57,9 +57,11 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <p> Category: {{recipe.category}} </p>
-                    <button class="btn waves-effect waves-light form_buttons" type="button" data-toggle="modal" data-target="#category_modal">Edit
+            <div class="row category_label">    
+               <p> Category: {{recipe.category}} </p>
+                    <button class="btn waves-effect waves-light btn-outline-secondary" type="button" data-toggle="modal" data-target="#category_modal">Edit
                     </button>
+            </div>
                 </div>
     <!--Category Modal -->
                 <div class="modal fade" id="category_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -90,9 +92,11 @@
                 </div>
             
         <div class="col-md-6">
-            <span><p> Main Ingredient: {{recipe.sub_category}} </p></span>
-                <span><button class="btn waves-effect waves-light form_buttons" type="button" data-toggle="modal" data-target="#sub_category_modal">Edit
-                </button></span>
+        <div class="row category_label">
+            <p> Main Ingredient: {{recipe.sub_category}} </p>
+                <button class="btn waves-effect waves-light btn-outline-secondary" type="button" data-toggle="modal" data-target="#sub_category_modal">Edit
+                </button>
+                </div>
                 </div>
 <!-- Sub- Category Modal -->
             <div class="modal fade" id="sub_category_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -135,8 +139,7 @@
         <div class="row buttons_edit_page">
             <div class="col-md-12">
                         <a class="btn waves-effect waves-light form_buttons" href="{{url_for('main_page')}}">Cancel
-                        </a
-                    </form>
+                        </a>
             </div>
         </div>
     </div>

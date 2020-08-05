@@ -141,10 +141,11 @@ textarea {
 }
 
 .buttons_edit_page {
-        justify-content: center;
+    justify-content: center;
     margin: auto;
-
+    text-align: center;
 }
+
 
 /** Search Results **/
 
@@ -168,6 +169,9 @@ textarea {
     padding-bottom: 25px;
 }
 
+.category_label p {
+    padding-top: 1em;
+}
 
 /** Submission Page **/
 .submission {
@@ -183,10 +187,21 @@ textarea {
 div.panel.show {
     display: block !important;
 }
+
+/* No Results Page */
+#no_results_message h5{
+    padding-top: 2em;
+   text-align: center;
+}
 /* Media Queries */
 
 @media(max-width: 600px) {
     textarea {
         min-width:200px; 
         max-width:100%;
+}
+
+#no_results_message h5{
+    padding-bottom: 2em;
+   
 }
