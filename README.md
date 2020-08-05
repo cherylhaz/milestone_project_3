@@ -22,13 +22,21 @@ This section is also where you would share links to any wireframes, mockups, dia
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
 ### Existing Features
-Feature 1 - allows users X to achieve Y, by having them fill out Z
-...
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+Navigation bar 
+
+Search by Category Page 
+
+Add Recipe 
+
+Edit or Delete Recipe
+
+Confirmation of Added Recipe 
+
+
 
 
 ### Features Left to Implement
-Future enhancements will include: 
+Future enhancements would include: 
 1.  User log in and personalized experience
 2.  Greater search capability, including search by keywords, ingredients, cooking time
 3.  Sharing tools so recipes could be shared on Pinterest or other social media sites
@@ -89,6 +97,9 @@ Images used are from:  https://unsplash.com/
 ### Acknowledgements
 Design inspiration came from: 
 https://www.awwwards.com/sites/outdoor-dreams
+
+Other inspiration came from the project submitted by Nico as shared on LinkedIn
+https://github.com/Frozenaught/homechopped
 
 Footer code was from 
 https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
