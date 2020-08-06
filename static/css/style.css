@@ -146,6 +146,9 @@ textarea {
     text-align: center;
 }
 
+.list_buttons {
+    margin-left: 1em;
+}
 
 /** Search Results **/
 

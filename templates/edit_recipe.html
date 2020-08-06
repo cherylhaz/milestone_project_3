@@ -6,12 +6,14 @@
     <div class="container-fluid">
     <form action="{{ url_for('update_recipe', recipe_id=recipe._id)}}" method="POST" class="col s12">
             <div class="row">
+            <!--Title Input-->       
             <div class="col-md-6">
             <div class="form-group">
             <label for="title">Recipe Title:</label>
                 <input id="title" name="title" type="text" class="validate text_field" value="{{recipe.title}}">
             </div>
             </div>
+            <!--Ingredients Input-->       
             <div class="col-md-6">
         <div class="form-group">
         <label for="ingredients">Ingredients:</label>
@@ -21,6 +23,7 @@
         
         </div>
         <div class="row">
+        <!--Method Input-->       
             <div class="col-md-6">
                 <div class="form-gorup">
                     <label for="method">Method:</label>
@@ -28,6 +31,7 @@
           
                 </div>
             </div>
+            <!--Required Tools Input-->       
             <div class="col-md-6">
                 <div class="form-group">
                     <label>Required Tools:</label>
@@ -40,6 +44,7 @@
                 </div>
             </div>
         </div>
+        <!--Source Input-->       
         <div class="row">
         <div class="col-md-6">
         <div class="form-group">
@@ -48,6 +53,7 @@
           
         </div>
         </div>
+ <!--Cooking Time Input-->        
         <div class="col-md-6">
             <div class="form-group">
                 <label for="cooking_time">Cooking Time:</label>
@@ -55,11 +61,12 @@
             </div>
         </div>
         </div>
+        <!--Category Input-->       
         <div class="row">
             <div class="col-md-6">
             <div class="row category_label">    
                <p> Category: {{recipe.category}} </p>
-                    <button class="btn waves-effect waves-light btn-outline-secondary" type="button" data-toggle="modal" data-target="#category_modal">Edit
+                    <button class="btn waves-effect waves-light btn-outline-secondary list_buttons" type="button" data-toggle="modal" data-target="#category_modal">Edit
                     </button>
             </div>
                 </div>
@@ -90,11 +97,11 @@
                         </div>
                     </div>
                 </div>
-            
+<!--Sub-Category Input-->       
         <div class="col-md-6">
         <div class="row category_label">
             <p> Main Ingredient: {{recipe.sub_category}} </p>
-                <button class="btn waves-effect waves-light btn-outline-secondary" type="button" data-toggle="modal" data-target="#sub_category_modal">Edit
+                <button class="btn waves-effect waves-light btn-outline-secondary list_buttons" type="button" data-toggle="modal" data-target="#sub_category_modal">Edit
                 </button>
                 </div>
                 </div>
@@ -126,6 +133,8 @@
                 </div>
             </div>
             </div>
+
+<!--Update/Cancel Buttons-->       
         <div class="row buttons_edit_page">
         
                 <div class="form-group">
