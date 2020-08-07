@@ -12,31 +12,27 @@
 <div class="page_container">
 <div class="content">
 <!--Header -->
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light my_header">
-        <a class="navbar-brand" href="{{url_for('main_page')}}">Recipe Box</a>
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="{{url_for('main_page')}}">Search <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{url_for('add_recipe')}}">Add Recipe</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{url_for('more_info')}}">More Information</a>
-            </li>
-        </ul>
-        <button class="navbar-toggler" type="button" data-toggle="dropdown" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse  navbar-collapse" id="navbarNavDropdown">
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-                <a class="dropdown-item" href="{{url_for('main_page')}}">Home</a>
-                <a class="dropdown-item" href="{{url_for('add_recipe')}}">Add Recipe</a>
-                <a class="dropdown-item" href="{{url_for('more_info')}}">More Information</a>
-            </div>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{{url_for('main_page')}}">Recipe Box</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{{url_for('main_page')}}">Search <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('add_recipe')}}">Add Recipe</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('more_info')}}">More Information</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 
 <!--Hero Image -->
         <section id="header_image>"
@@ -48,7 +44,7 @@
             </div>
         </div>
         </section>
-    </header>
+    
  <!--Content -->   
      <div class="container">
     {% block content%}
