@@ -22,17 +22,18 @@ This section is also where you would share links to any wireframes, mockups, dia
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
 ### Existing Features
-Navigation bar 
+Navigation bar - The Navbar is located at the top to easily move around the site and to access all other parts of the site.  The feature is mobile
+friendly.  
 
-Search by Category Page 
+Search by Category Page - The main page or search page is divided by category and allows the user to easily find the recipes they are looking for broken down by meal.
+Typically when searching for recipes you are looking for a dessert to make or something for dinner.  This is the easiest way to divide the recipes for easiest access for the user.
+The features left to implement section describes additional search capability that would be added in the future. 
 
 Add Recipe 
 
-Edit or Delete Recipe
-
 Confirmation of Added Recipe 
 
-
+Edit or Delete Recipe
 
 
 ### Features Left to Implement
