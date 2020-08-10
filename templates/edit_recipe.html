@@ -28,21 +28,43 @@
                 <div class="form-gorup">
                     <label for="method">Method:</label>
                     <textarea id="method" name="method" class="validate text_field" value="{{recipe.method}}">{{recipe.method}}</textarea>
-          
                 </div>
             </div>
-            <!--Required Tools Input-->       
+            <!--Required Tools Input-->  
             <div class="col-md-6">
-                <div class="form-group">
-                    <label>Required Tools:</label>
-                    <select id="required_tools" name="required_tools" class="select1">
-                    <option value="" disabled selected>{{recipe.required_tools}}</option>
+            <div class="row category_label">    
+               <p> Required Tools: {{recipe.required_tools}} </p>
+                    <button class="btn waves-effect waves-light btn-outline-secondary list_buttons" type="button" data-toggle="modal" data-target="#category_modal">Edit
+                    </button>
+                    </div>
+            </div> 
+        <!--Required Tools Modal -->
+                <div class="modal fade" id="category_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Choose the required tools:</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            
+                                    <select class="select1" id="category" name="category"  value="{{recipe.category}}">
+                                    <option value="" disabled selected>{{recipe.required_tools}}</option>
                     {% for tool in required_tools %}
                         <option id="{{tool.name}}">{{tool.name}}</option>     
                     {% endfor %}
-                    </select>      
+                                    </select>
+                            
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary form_buttons">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
         </div>
         <!--Source Input-->       
         <div class="row">
@@ -92,7 +114,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-primary form_buttons">Save changes</button>
                             </div>
                         </div>
                     </div>
@@ -127,7 +149,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="button" class="btn btn-primary form_buttons">Save changes</button>
                         </div>
                     </div>
                 </div>
