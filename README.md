@@ -1,40 +1,84 @@
-# Recipe Box
+# ![alt text](./static/images/Recipe_Box.jpg "Recipe Box logo")
 
-The Recipe Box site is an easy to use online portal to store your favourite recipes.  Many people, myself included, have numerous cookbooks that
+The site, Recipe Box, is an easy to use online portal to store your favourite recipes.  Many people, myself included, have numerous cookbooks that
 we keep for just one or two recipes along with old handwritten pieces of paper with recipes handed down from other people. Storing this information in our 
 kitchens adds to clutter and it can be difficult to find something when you are looking for it.  This site offers a solution to input the recipes you have on hand
 and store them for easy access.
 
-Online recipes have seen an explosiion of growth the past number of years as bloogers aided by Pinterest and Instagram contine to share recipes 
+Online recipes have seen an explosion of growth the past number of years as bloogers aided by Pinterest and Instagram contine to share recipes 
 and many people have begun online collections which are easy to use and find what you are looking for.  The old favourites which are stored on hard copies
 can be impossible to integrate into this system as most people don't have their own blog or website where they can share them.  This site aims to solve this problem 
 and will enable everyone to store their recipes electronically, saving time, space and frustration.  
 
 ## UX
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
+The main goal was an easy to use site to sort and organize random recipes I have around my kitchen.  Having this issue myself, I am sure that it is a common problem with many people.
+Often recipes are ripped out of magazines, copied down from friends cookbooks or passed down from generation to generation by scribbling something down on a scrap piece of paper.
 
-As a user type, I want to perform an action, so that I can achieve a goal.
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), or just hosted elsewhere online and can be in any format that is viewable inside the browser.
+*To add a recipe:* 
+The link in in the main navigation bar and the form is easy to complete and use.  This saves this recipe in the collection and can be edited or deleted at a later date.
+A confirmation screen appears after the recipe is submitted to reassure the user that the recipe has been saved. 
+
+*To make changes to a current recipe:*
+When the recipe in located, sometimes input errors are caught at a later date.  When looking at the recipe, an edit button is conviently there to allow for instant changes.
+
+*To find a recipe:*
+The main page is the search feature and allows the user to narrow down recipes by category.  These categories are the most common ones, often you are looking for an idea to make for dinner, 
+so it makes sense to group all the dinner recipes together.  By clicking on the button, all recipes within that category are listed.
+
+**Database Structure**
+The database structure is outlined below and was created with MongoDB.  It was designed for future enhancements to the search functionality and to allow for links to affiliate programmmes.
+
+* recipe_box
+  + recipes
+    + _id
+    + title
+    + ingredients
+    + method
+    + required_tools
+    + source
+    + cooking_time
+    + category
+    + sub_category
+  + categories
+    + _id
+    + title
+    + image_url
+    + slug
+  + sub_categories
+    + _id
+    + title
+    + image_url
+  + required_tools
+    + _id
+    + name
+    + purchase_url
+
+**MockUp**  
+Mockups were completed using Balsamiq Mockups 3 and can be viewed [here](./static/mockups/RecipeSite.pdf")
 
 ## Features
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
 ### Existing Features
-Navigation bar - The Navbar is located at the top to easily move around the site and to access all other parts of the site.  The feature is mobile
+**Navigation bar**  
+The Navbar is located at the top to easily move around the site and to access all other parts of the site.  The feature is mobile
 friendly.  
 
-Search by Category Page - The main page or search page is divided by category and allows the user to easily find the recipes they are looking for broken down by meal.
+**[Search by Category Page]()**  
+The main page or search page is divided by category and allows the user to easily find the recipes they are looking for broken down by meal.
 Typically when searching for recipes you are looking for a dessert to make or something for dinner.  This is the easiest way to divide the recipes for easiest access for the user.
 The features left to implement section describes additional search capability that would be added in the future. 
 
-Add Recipe 
+**[Add Recipe]()**  
+This page was kept simple and straightforward on purpose so it would appeal to a large number of users.
+Only title, ingredients, method, cooking time and category are required fields so that entering a recipe is not overly cumbersome. 
 
-Confirmation of Added Recipe 
+**Confirmation of Added Recipe**  
+A page which appears after a recipe is added to reassure the user that the recipe has been saved and added to the database.
 
-Edit or Delete Recipe
-
+**Edit and Delete Recipe**  
+Mistakes happen and things change so it is easy to edit a recipe or delete the entire record.  Both of these features are accesssible via the recipe modal which are accessible through the search page.
 
 ### Features Left to Implement
 Future enhancements would include: 
@@ -44,21 +88,26 @@ Future enhancements would include:
 4.  Links to sites to purchase required tools or ingredients to support revenue stream for site owner. 
 
 ## Technologies Used
-**[HTML](https://html.spec.whatwg.org/multipage/)**
-  The basic structure and display page was created using HTML.
+**[HTML](https://html.spec.whatwg.org/multipage/)**  
+  The basic structure and all pages were created using HTML.
 
-**[CSS](https://www.w3.org/Style/CSS/Overview.en.html)**
+**[CSS](https://www.w3.org/Style/CSS/Overview.en.html)**  
   Design and enhancement of user experience was done with CSS to make it a site that is both easy to read and navigate. 
 
-**[JavaScript](http://www.ecmascript.org/)**
-  Used to provide the search, map and display functionality.
+**[JavaScript](http://www.ecmascript.org/)**  
+  Some of the bootstrap elements use JavaScript to function.
 
-**[JQuery](https://jquery.com/)**
-  Used to simplify the code in places and to simplify DOM movements.
+**[JQuery](https://jquery.com/)**  
+  Some of the bootstrap elements use jQuery to function.
 
-**[Materalize](https://materializecss.com/)**
+**[Bootstrap](https://getbootstrap.com/)**  
+Used for the framework of the site, including the layout, the forms, modals, navbar, footers.
 
-**[MongoDB](https://www.mongodb.com/)**
+**[MongoDB](https://www.mongodb.com/)**  
+Hosts the database for the project. 
+
+**[Canva](https://www.canva.com/)**  
+Is a free website and was used for the logo creation. 
 
 ## Testing
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
@@ -89,20 +138,17 @@ Separate git branch?
 In addition, if it is not obvious, you should also describe how to run your code locally.
 
 ## Credits
-### Content
-Sources of Recipes are listed as a database field, all other written content is original work. 
+### Content & Media
+Sources of recipes are listed as a database field, all other written content is original work. 
 
-### Media
-Images used are from:  https://unsplash.com/
+Images used are from [UnSplash](https://unsplash.com/)
 
 ### Acknowledgements
-Design inspiration came from: 
-https://www.awwwards.com/sites/outdoor-dreams
+1. Design inspiration came from [AWWWARDS](https://www.awwwards.com/sites/outdoor-dreams)
 
-Other inspiration came from the project submitted by Nico as shared on LinkedIn
+2. Other inspiration came from the project submitted by Nico as shared on LinkedIn
 https://github.com/Frozenaught/homechopped
 
-Footer code was from 
-https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
+3. Footer code was from [Free Code Camp](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/)
 
-
+Special thank you to my mentor Akshat Garg and to Code Institute Support who assisted me in getting through a rough patch on the project.
