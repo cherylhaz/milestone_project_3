@@ -12,19 +12,20 @@
 
  /** Header **/
  
- .my_header {
+ #my_header {
     background-color: #388e3c;
     font-family: 'Poppins', sans-serif;
 }
 
-nav .title {
-    padding-left: 20px;
+#my_header a{
+    color: #ffffff; 
+    font-family: 'Poppins', sans-serif;
 }
 
-
-.my_header a:hover {
+#my_header a:hover {
     color: #f57c00;
 }
+
 
 /** Hero Image **/
 
@@ -195,5 +196,4 @@ div.panel.show {
 
 #no_results_message h5{
     padding-bottom: 2em;
-   
 }

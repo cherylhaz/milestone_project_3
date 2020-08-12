@@ -5,7 +5,7 @@
             {% if loop.index % 2 != 0 %}
                 <div class="row offset-md-2 category_row align-items-center">
                     <div class="col-sm-4 category_picture">
-                        <img src="{{category.image_url}}" alt="Image showing category" />
+                        <img src="{{category.image_url}}" alt="Image showing {{category.title}}" />
                     </div>
                     <div class="col-md-6">
                         <div class="input-field">
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 category_picture">
-                        <img src="{{category.image_url}}" alt="Image showing category" />
+                        <img src="{{category.image_url}}" alt="Image showing {{category.title}}" />
                     </div>
                 </div>
             {% endif %}
