@@ -1,37 +1,31 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container-fluid">
-<form name="selected_category" action="{{url_for('search_results')}}" method="POST">
+    <form name="selected_category" action="{{url_for('search_results')}}" method="POST">
         {% for category in categories %} 
             {% if loop.index % 2 != 0 %}
-                <div class="row offset-md-2 category_row align-items-center">
-                    <div class="col-sm-4 category_picture">
-                        <img src="{{category.image_url}}" alt="Image showing {{category.title}}" />
-                    </div>
-                    <div class="col-md-6">
-                        <div class="input-field">
-                            <button  class="btn-lg btn-block category_button" type="submit" value="{{category.title}}" name="selected_category">{{category.title}}
-                            </button>
-                        </div>
-                    </div>
-                </div>           
-            {% else %}
-                <div class="row category_row align-items-center">
-                    <div class="offset-md-2 col-sm-4">
-                        <div class="input-field">
-                            <button  class="btn-lg btn-block category_button" type="submit" value="{{category.title}}"  name="selected_category">{{category.title}}
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 category_picture">
-                        <img src="{{category.image_url}}" alt="Image showing {{category.title}}" />
+            <div class="row offset-md-2 category_row align-items-center">
+                <div class="col-sm-4 category_picture">
+                    <img src="{{category.image_url}}" alt="Image showing {{category.title}}" />
+                </div>
+                <div class="col-md-6">
+                    <div class="input-field">
+                        <button class="btn-lg btn-block category_button" type="submit" value="{{category.title}}" name="selected_category">{{category.title}}</button>
                     </div>
                 </div>
-            {% endif %}
+            </div>
+            {% else %}
+            <div class="row category_row align-items-center">
+                <div class="offset-md-2 col-sm-4">
+                    <div class="input-field">
+                        <button class="btn-lg btn-block category_button" type="submit" value="{{category.title}}" name="selected_category">{{category.title}}</button>
+                    </div>
+                </div>
+                <div class="col-sm-6 category_picture">
+                    <img src="{{category.image_url}}" alt="Image showing {{category.title}}" />
+                </div>
+            </div>
+            {% endif %} 
         {% endfor %}
-</form>
+    </form>
 </div>
-
-
-
-
 {% endblock %}

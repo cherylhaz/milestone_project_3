@@ -58,7 +58,6 @@ The database structure is outlined below and was created with MongoDB.  It was d
 Mockups were completed using Balsamiq Mockups 3 and can be viewed [here](./static/mockups/RecipeSite.pdf")
 
 ## Features
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
 ### Existing Features
 **Navigation bar**  
@@ -109,7 +108,27 @@ Hosts the database for the project.
 **[Canva](https://www.canva.com/)**  
 Is a free website and was used for the logo creation. 
 
+**Code Beautifiers**  
+To ensure code was properly presented:  
+[CSS](https://www.freeformatter.com/css-beautifier.html)  
+[HTML](https://webformatter.com/html)
+
 ## Testing
+All HTML code was put through [Nu HTML Checker](https://validator.w3.org/nu/) to catch any errors.  
+Python code was put through [PEP8 Online Checker](http://pep8online.com/) to catch any errors.  
+The problems tab in Gitpod was used extensively to catch any issues as code was written.  
+It was also written using the debug mode.  This was turned off prior to submission as per guidelines.
+
+**Search Results**  
+To confirm what happens when there are no results, choose the Lunch category.  There are curently no recipes in that section
+A message will appear telling the user to search again. 
+
+**Add Recipe**
+
+**Edit Recipe**
+
+**Delete Recipe**
+
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
 Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
@@ -146,9 +165,13 @@ Images used are from [UnSplash](https://unsplash.com/)
 ### Acknowledgements
 1. Design inspiration came from [AWWWARDS](https://www.awwwards.com/sites/outdoor-dreams)
 
-2. Other inspiration came from the project submitted by Nico as shared on LinkedIn
+2. Colour inspiration came from [Material Design](https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=00C853&secondary.color=D81B60)  
+
+3. Fonts used are from [Google Fonts](https://fonts.google.com/)
+
+3. Other inspiration came from the project submitted by Nico as shared on LinkedIn
 https://github.com/Frozenaught/homechopped
 
-3. Footer code was from [Free Code Camp](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/)
+4. Footer code was from [Free Code Camp](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/)
 
 Special thank you to my mentor Akshat Garg and to Code Institute Support who assisted me in getting through a rough patch on the project.

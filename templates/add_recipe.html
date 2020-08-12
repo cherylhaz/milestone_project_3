@@ -31,7 +31,7 @@
         <div class="col-md-6">
   <div class="form-group">
     <label for="required_tools">Required Tools:</label>
-        <select multiple id="required_tools" name="required_tools" class="form-control" multiple>   
+        <select id="required_tools" name="required_tools" class="form-control" multiple>   
             <option value="" disabled selected>Choose all that apply</option>               
                 {% for tool in required_tools %}
                     <option value="{{tool.name}}">{{tool.name}}</option>
@@ -86,6 +86,6 @@
 </div>
 </div>
   </form>
-  
+  </div>
   
 {% endblock %}

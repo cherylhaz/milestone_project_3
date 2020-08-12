@@ -18,11 +18,12 @@ mongo = PyMongo(app)
 @app.route('/search_results', methods=['GET', 'POST'])
 def search_results():
     result_number = mongo.db.recipes.count_documents({"category": request.form.get("selected_category")})
-    query=mongo.db.recipes.find({"category": request.form.get("selected_category")})
+    query = mongo.db.recipes.find({"category": request.form.get("selected_category")})
     if result_number > 0:
         return render_template("search_results.html", recipes=query)
     else:
         return render_template("no_results.html")
+
 
 # Add New Recipe to Database
 @app.route('/add_recipe')
@@ -62,14 +63,14 @@ def update_recipe(recipe_id):
     recipes = mongo.db.recipes
     recipes.update({'_id': ObjectId(recipe_id)},
                     {
-                        'title': request.form.get('title'),
-                        'ingredients': request.form.get('ingredients'),
-                        'method': request.form.get('method'),
-                        'required_tools': request.form.get('required_tools'),
-                        'source': request.form.get('source'),
-                        'cooking_time': request.form.get('cooking_time'),
-                        'category': request.form.get('category'),
-                        'sub_category': request.form.get('sub_category')
+                    'title': request.form.get('title'),
+                    'ingredients': request.form.get('ingredients'),
+                    'method': request.form.get('method'),
+                    'required_tools': request.form.get('required_tools'),
+                    'source': request.form.get('source'),
+                    'cooking_time': request.form.get('cooking_time'),
+                    'category': request.form.get('category'),
+                    'sub_category': request.form.get('sub_category')
                     })
     return redirect(url_for('search_results'))
 
