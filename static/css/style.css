@@ -11,7 +11,6 @@
 
 
  /** Header **/
- 
  #my_header {
     background-color: #388e3c;
     font-family: 'Poppins', sans-serif;
@@ -20,6 +19,7 @@
 #my_header a{
     color: #ffffff; 
     font-family: 'Poppins', sans-serif;
+    letter-spacing: .25em;
 }
 
 #my_header a:hover {
@@ -28,7 +28,6 @@
 
 
 /** Hero Image **/
-
 .main_image {
 background-image: url("../images/background1.jpg"); 
   background-color: #fff; 
@@ -68,6 +67,7 @@ background-image: url("../images/background1.jpg");
     color: #ffffff; 
     font-family: 'Poppins', sans-serif;
     padding: 5px;
+    letter-spacing: .25em;
 }
 
 /** Main Page Category Select Area **/
@@ -99,6 +99,7 @@ background-image: url("../images/background1.jpg");
     text-align: center;
     padding-bottom: 25px;
     padding-top: 25px;
+    letter-spacing: .25em;
 }
 
 .add_recipe_form label {
@@ -119,6 +120,7 @@ textarea {
 .form_buttons {
     background-color: #f57c00;
     margin: 10px;
+    letter-spacing: .25em;
 }
 
 .form_buttons:hover {
@@ -140,16 +142,31 @@ textarea {
     margin-left: 1em;
 }
 
-/** Search Results **/
+.category_button{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(56, 142, 60, 0.6);
+    color: #fff;
+    letter-spacing: .25em;
+}
 
+.category_button:hover {
+    background-color: #f57c00;
+}
+
+/** Search Results **/
 .recipe_title {
-    background-color: lightgrey;
+    background-color: rgba(56, 142, 60, 0.6);
     margin-top: .75em;
     margin-bottom: .75em;
 }
 
+.recipe_title:hover {
+    background-color: #f57c00;
+}
+
 .recipe_title h4 {
-      color: #f57c00;
+      color: #fff;
+      letter-spacing: .25em;
 }
 
 
@@ -160,6 +177,7 @@ textarea {
     text-align: center;
     padding-top: 25px;
     padding-bottom: 25px;
+    letter-spacing: .25em;
 }
 
 .category_label p {
@@ -171,6 +189,7 @@ textarea {
     text-align: center;
     margin-top: 5em;
     margin-bottom: 5em;
+    letter-spacing: .25em;
 }
 
 .text_field{
@@ -185,6 +204,7 @@ div.panel.show {
 #no_results_message h5{
     padding-top: 2em;
    text-align: center;
+   letter-spacing: .25em;
 }
 /* Media Queries */
 
@@ -196,4 +216,14 @@ div.panel.show {
 
 #no_results_message h5{
     padding-bottom: 2em;
+}
+
+#logo {
+    width: 80%;
+    height: auto;
+}
+
+.category_button {
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
