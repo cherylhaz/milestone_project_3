@@ -71,8 +71,6 @@ background-image: url("../images/background1.jpg");
 }
 
 /** Main Page Category Select Area **/
-
-
 .category_picture {
     overflow: hidden;
     padding: 0;
@@ -93,7 +91,6 @@ background-image: url("../images/background1.jpg");
 
 
 /** Form **/
-
 #add_recipe_title{
     color: #f57c00;
     text-align: center;
@@ -116,7 +113,6 @@ textarea {
 }
 
 /** Buttons **/
-
 .form_buttons {
     background-color: #f57c00;
     margin: 10px;
@@ -206,8 +202,13 @@ div.panel.show {
    text-align: center;
    letter-spacing: .25em;
 }
-/* Media Queries */
 
+/* More Information Page */
+.info {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: .25em;
+}
+/* Media Queries */
 @media(max-width: 600px) {
     textarea {
         min-width:200px; 
