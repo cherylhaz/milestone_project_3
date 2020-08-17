@@ -123,28 +123,23 @@ It was also written using the debug mode.  This was turned off prior to submissi
 To confirm what happens when there are no results, choose the Lunch category.  There are curently no recipes in that section
 A message will appear telling the user to search again. 
 
-**Add Recipe**
+There is a glitch where when you open one recipe, they all open.  I have tried to fix this but have been unsuccessfull prior to submission, but this 
+will be addressed in the future.  
 
-**Edit Recipe**
+**Add Recipe**  
+First, go to the Add Recipe Page,
+Try, to submit a recipe with just a source.  An error message appears on required fields (one at a time) which says "Please Fill out this field"
+You cannot submit a recipe without the required information.  
 
-**Delete Recipe**
+**Edit Recipe/Delete Recipe**  
+First, I've done a search for a category.
+Then choosing an option, I have edited a field.  I have then confirmed in MongoDB that the change was saved correctly in the database.
+The same has been done for the delete recipe option. 
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+**Different Screen sizes**  
+Throughout the development process smaller screen sizes were checked regularly to confirm the design worked on all screens.  This was done with the Google Chrome Inspect feature.
+The page works and looks attractive at all screen sizes.  
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-Contact form:
-Go to the "Contact Us" page
-Try to submit the empty form and verify that an error message about the required fields appears
-Try to submit the form with an invalid email address and verify that a relevant error message appears
-Try to submit the form with all inputs valid and verify that a success message appears.
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
 ## Deployment
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
