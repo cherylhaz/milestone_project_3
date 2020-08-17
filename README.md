@@ -142,6 +142,8 @@ The page works and looks attractive at all screen sizes.
 
 
 ## Deployment
+The project is deployed at https://recipe-box-chaze.herokuapp.com/ 
+
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
 
 In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:

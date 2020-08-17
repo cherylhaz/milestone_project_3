@@ -5,6 +5,7 @@
 <!--Form -->
 <div class="container-fluid">
 <form action="{{url_for('insert_recipe')}}" method="POST" class="add_recipe_form">
+ <!-- Title and Ingredients-->
   <div class="row">
   <div class="col-md-6">
   <div class="form-group">
@@ -20,6 +21,7 @@
   </div>
   </div>
   </div>
+  <!-- Method and Required Tools-->
   <div class="row">
   <div class="col-md-6">
 <div class="form-group">
@@ -40,6 +42,7 @@
   </div>
   </div>
   </div> 
+  <!-- Source and Cooking Time-->
   <div class="row">
   <div class="col-md-6">
 <div class="form-group">
@@ -54,6 +57,7 @@
 </div>
 </div>
 </div>
+<!-- Category and Sub-Category-->
 <div class="row">
 <div class="col-md-6">
   <div class="form-group">
@@ -79,6 +83,7 @@
 </div>
 </div>
 </div>
+<!-- Buttons-->
 <div class="row">
 <div id="button_add_page">
     <button class="btn waves-effect waves-light form_buttons " id="add_button" type="submit" name="action">Add
