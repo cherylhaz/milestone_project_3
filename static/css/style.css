@@ -1,244 +1,244 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap');
-
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap');
 .page_container {
-  position: relative;
-  min-height: 100vh;
+   position: relative;
+   min-height: 100vh;
 }
 
 .content {
-  padding-bottom: 4.5rem;
+   padding-bottom: 4.5rem;
 }
 
 
 /** Header **/
 
 #my_header {
-  background-color: #388e3c;
-  font-family: 'Poppins', sans-serif;
+   background-color: #388e3c;
+   font-family: 'Poppins', sans-serif;
 }
 
 #my_header a {
-  color: #ffffff;
-  font-family: 'Poppins', sans-serif;
-  letter-spacing: .25em;
+   color: #ffffff;
+   font-family: 'Poppins', sans-serif;
+   letter-spacing: .25em;
 }
 
 #my_header a:hover {
-  color: #f57c00;
+   color: #f57c00;
 }
 
 
 /** Hero Image **/
 
 .main_image {
-  background-image: url("../images/background1.jpg");
-  background-color: #fff;
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  align-content: center;
-  position: relative;
+   background-image: url("../images/background1.jpg");
+   background-color: #fff;
+   height: 500px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   align-content: center;
+   position: relative;
 }
 
 #logo {
-  max-width: 800px;
-  max-height: 400px;
-  background-color: rgba(56, 142, 60, 0.6);
-  align-content: center;
-  margin: 0 auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+   max-width: 800px;
+   max-height: 400px;
+   background-color: rgba(56, 142, 60, 0.6);
+   align-content: center;
+   margin: 0 auto;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
 }
 
 
 /** Footer **/
 
 #footer {
-  background-color: #388e3c;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 4.5rem;
+   background-color: #388e3c;
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   height: 4.5rem;
 }
 
 .footer_text {
-  color: #ffffff;
-  font-family: 'Poppins', sans-serif;
-  padding: 5px;
-  letter-spacing: .25em;
+   color: #ffffff;
+   font-family: 'Poppins', sans-serif;
+   padding: 5px;
+   letter-spacing: .25em;
 }
 
 
 /** Main Page Category Select Area **/
 
 .category_picture {
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  width: 100%;
+   overflow: hidden;
+   padding: 0;
+   margin: 0;
+   width: 100%;
 }
 
 .category_picture img {
-  padding: 0;
-  display: flex;
-  margin: 0;
+   padding: 0;
+   display: flex;
+   margin: 0;
 }
 
 .category_row {
-  margin-top: 2em;
+   margin-top: 2em;
 }
 
 
 /** Form **/
 
 #add_recipe_title {
-  color: #f57c00;
-  text-align: center;
-  padding-bottom: 25px;
-  padding-top: 25px;
-  letter-spacing: .25em;
+   color: #f57c00;
+   text-align: center;
+   padding-bottom: 25px;
+   padding-top: 25px;
+   letter-spacing: .25em;
 }
 
 .add_recipe_form label {
-  font-family: 'Poppins', sans-serif;
-  font-size: large;
+   font-family: 'Poppins', sans-serif;
+   font-size: large;
 }
 
 .method {
-  min-width: 400px;
-  max-width: 100%;
-  min-height: 50px;
-  height: 100%;
-  width: 100%;
-  resize:vertical-auto;
+   min-width: 400px;
+   max-width: 100%;
+   min-height: 50px;
+   height: 100%;
+   width: 100%;
+   resize: vertical-auto;
 }
 
 
 /** Buttons **/
 
 .form_buttons {
-  background-color: #f57c00;
-  margin: 10px;
-  letter-spacing: .25em;
+   background-color: #f57c00;
+   margin: 10px;
+   letter-spacing: .25em;
 }
 
 .form_buttons:hover {
-  background-color: #bb4d00;
+   background-color: #bb4d00;
 }
 
 #button_add_page {
-  justify-content: center;
-  margin: auto;
+   justify-content: center;
+   margin: auto;
 }
 
 .buttons_edit_page {
-  justify-content: center;
-  margin: auto;
-  text-align: center;
+   justify-content: center;
+   margin: auto;
+   text-align: center;
 }
 
 .list_buttons {
-  margin-left: 1em;
+   margin-left: 1em;
 }
 
 .category_button {
-  font-family: 'Poppins', sans-serif;
-  background-color: rgba(56, 142, 60, 0.6);
-  color: #fff;
-  letter-spacing: .25em;
+   font-family: 'Poppins', sans-serif;
+   background-color: rgba(56, 142, 60, 0.6);
+   color: #fff;
+   letter-spacing: .25em;
 }
 
 .category_button:hover {
-  background-color: #f57c00;
+   background-color: #f57c00;
 }
 
 
 /** Search Results **/
 
 .recipe_title {
-  background-color: rgba(56, 142, 60, 0.6);
-  margin-top: .75em;
-  margin-bottom: .75em;
-  color: #fff;
-  letter-spacing: .25em;
-  font-size: 1.5em;
+   background-color: rgba(56, 142, 60, 0.6);
+   margin-top: .75em;
+   margin-bottom: .75em;
+   color: #fff;
+   letter-spacing: .25em;
+   font-size: 1.5em;
 }
 
 .recipe_title:hover {
-  background-color: #f57c00;
-  color: #fff;
-  text-decoration: none !important;
+   background-color: #f57c00;
+   color: #fff;
+   text-decoration: none !important;
 }
+
 
 /** Edit Page **/
 
 #edit_title {
-  color: #f57c00;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  letter-spacing: .25em;
+   color: #f57c00;
+   font-family: 'Poppins', sans-serif;
+   text-align: center;
+   padding-top: 25px;
+   padding-bottom: 25px;
+   letter-spacing: .25em;
 }
 
 .category_label p {
-  padding-top: 1em;
+   padding-top: 1em;
 }
 
 
 /** Submission Page **/
 
 .submission {
-  text-align: center;
-  margin-top: 5em;
-  margin-bottom: 5em;
-  letter-spacing: .25em;
+   text-align: center;
+   margin-top: 5em;
+   margin-bottom: 5em;
+   letter-spacing: .25em;
 }
 
 .text_field {
-  width: 100%;
+   width: 100%;
 }
 
 div.panel.show {
-  display: block !important;
+   display: block !important;
 }
 
 
 /* No Results Page */
 
 #no_results_message h5 {
-  padding-top: 2em;
-  text-align: center;
-  letter-spacing: .25em;
+   padding-top: 2em;
+   text-align: center;
+   letter-spacing: .25em;
 }
 
 
 /* More Information Page */
 
 .info {
-  font-family: 'Poppins', sans-serif;
-  letter-spacing: .25em;
+   font-family: 'Poppins', sans-serif;
+   letter-spacing: .25em;
 }
 
 
 /* Media Queries */
 
 @media(max-width: 600px) {
-  textarea {
-    min-width: 200px;
-    max-width: 100%;
-  }
-  #no_results_message h5 {
-    padding-bottom: 2em;
-  }
-  #logo {
-    width: 80%;
-    height: auto;
-  }
-  .category_button {
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
+   textarea {
+      min-width: 200px;
+      max-width: 100%;
+   }
+   #no_results_message h5 {
+      padding-bottom: 2em;
+   }
+   #logo {
+      width: 80%;
+      height: auto;
+   }
+   .category_button {
+      margin-top: 1em;
+      margin-bottom: 1em;
+   }

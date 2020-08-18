@@ -1,4 +1,4 @@
-# ![alt text](./static/images/Recipe_Box.jpg "Recipe Box logo")
+# ![alt text](./static/images/recipebox.jpg "Recipe Box logo")
 
 The site, Recipe Box, is an easy to use online portal to store your favourite recipes.  Many people, myself included, have numerous cookbooks that
 we keep for just one or two recipes along with old handwritten pieces of paper with recipes handed down from other people. Storing this information in our 
@@ -55,7 +55,7 @@ The database structure is outlined below and was created with MongoDB.  It was d
     + purchase_url
 
 **MockUp**  
-Mockups were completed using Balsamiq Mockups 3 and can be viewed [here](./static/mockups/RecipeSite.pdf")
+Mockups were completed using Balsamiq Mockups 3 and can be viewed [here](./static/mockups/recipesite.pdf")
 
 ## Features
 

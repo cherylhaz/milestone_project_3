@@ -1,151 +1,57 @@
-{% extends 'base.html' %}
-{% block content %}
-    <div class="container-fluid" id="edit_title">
+{% extends 'base.html' %} {% block content %}
+<div class="container-fluid" id="edit_title">
     <h3>Edit</h3>
-    </div>
-    <div class="container-fluid">
+</div>
+<div class="container-fluid">
     <form action="{{ url_for('update_recipe', recipe_id=recipe._id)}}" method="POST" class="col s12">
-            <div class="row">
-            <!--Title Input-->       
+        <div class="row">
+            <!--Title Input-->
             <div class="col-md-6">
-            <div class="form-group">
-            <label for="title">Recipe Title:</label>
-                <input id="title" name="title" type="text" class="validate text_field" value="{{recipe.title}}">
+                <div class="form-group">
+                    <label for="title">Recipe Title:</label>
+                    <input id="title" name="title" type="text" class="validate text_field" value="{{recipe.title}}" />
+                </div>
             </div>
-            </div>
-            <!--Ingredients Input-->       
+            <!--Ingredients Input-->
             <div class="col-md-6">
-        <div class="form-group">
-        <label for="ingredients">Ingredients:</label>
-          <input id="ingredients" name="ingredients" type="text" class="validate text_field" value="{{recipe.ingredients}}">
-        </div>
-        </div>
-        
+                <div class="form-group">
+                    <label for="ingredients">Ingredients:</label>
+                    <input id="ingredients" name="ingredients" type="text" class="validate text_field" value="{{recipe.ingredients}}" />
+                </div>
+            </div>
         </div>
         <div class="row">
-        <!--Method Input-->       
+            <!--Method Input-->
             <div class="col-md-6">
                 <div class="form-gorup">
                     <label for="method">Method:</label>
-                    <input id="method" name="method" class="validate text_field method" type="text" value="{{recipe.method}}">
+                    <input id="method" name="method" class="validate text_field method" type="text" value="{{recipe.method}}" />
                 </div>
             </div>
-            <!--Required Tools Input-->  
+            <!--Required Tools Input-->
             <div class="col-md-6">
-            <div class="row category_label">    
-               <p> Required Tools: {{recipe.required_tools}} </p>
-                    <button class="btn waves-effect waves-light btn-outline-secondary list_buttons" type="button" data-toggle="modal" data-target="#tools_modal">Edit
-                    </button>
-                    </div>
-            </div> 
-        <!--Required Tools Modal -->
-                <div class="modal fade" id="tools_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Choose the required tools:</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                            
-                                    <select class="select1" id="category" name="category"  value="{{recipe.category}}">
-                                    <option value="" disabled selected>{{recipe.required_tools}}</option>
-                    {% for tool in required_tools %}
-                        <option id="{{tool.name}}">{{tool.name}}</option>     
-                    {% endfor %}
-                                    </select>
-                            
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary form_buttons">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row category_label">
+                    <p>Required Tools: {{recipe.required_tools}}</p>
+                    <button class="btn waves-effect waves-light btn-outline-secondary list_buttons" type="button" data-toggle="modal" data-target="#tools_modal">Edit</button>
                 </div>
-        </div>
-        <!--Source Input-->       
-        <div class="row">
-        <div class="col-md-6">
-        <div class="form-group">
-        <label for="source">Source:</label>
-          <input id="source" name="source" type="text" class="validate text_field" value="{{recipe.source}}">
-          
-        </div>
-        </div>
- <!--Cooking Time Input-->        
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="cooking_time">Cooking Time:</label>
-                <input id="cooking_time" name="cooking_time" type="text" class="validate text_field" value="{{recipe.cooking_time}}">
             </div>
-        </div>
-        </div>
-        <!--Category Input-->       
-        <div class="row">
-            <div class="col-md-6">
-            <div class="row category_label">    
-               <p> Category: {{recipe.category}} </p>
-                    <button class="btn waves-effect waves-light btn-outline-secondary list_buttons" type="button" data-toggle="modal" data-target="#category_modal">Edit
-                    </button>
-            </div>
-                </div>
-    <!--Category Modal -->
-                <div class="modal fade" id="category_modal" tabindex="-1" role="dialog" aria-labelledby="category_modal" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="category_modal">Choose a Category</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                            
-                                    <select class="select1" id="category" name="category"  value="{{recipe.category}}">
-                                    <option value="" disabled selected>{{recipe.category}}</option>
-                                    {% for category in categories %}
-                                        <option id="{{category.title}}">{{category.title}}</option>
-                                    {% endfor %}
-                                    </select>
-                            
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary form_buttons">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-<!--Sub-Category Input-->       
-        <div class="col-md-6">
-        <div class="row category_label">
-            <p> Main Ingredient: {{recipe.sub_category}} </p>
-                <button class="btn waves-effect waves-light btn-outline-secondary list_buttons" type="button" data-toggle="modal" data-target="#sub_category_modal">Edit
-                </button>
-                </div>
-                </div>
-<!-- Sub- Category Modal -->
-            <div class="modal fade" id="sub_category_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <!--Required Tools Modal -->
+            <div class="modal fade" id="tools_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="sub_category_modal">Choose a Main Ingredient</h5>
+                            <h5 class="modal-title">Choose the required tools:</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                                <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                           
-                                <select class="select1" id="sub_category" name="sub_category" value="{{recipe.sub_category}}">
-                                <option value="{{recipe.sub_category}}" disabled selected> {{recipe.sub_category}}</option>
-                                {% for sub_category in sub_categories %}
-                                    <option id="{{sub_category.title}}">{{sub_category.title}}</option>
+                            <select class="select1" id="category" name="category" value="{{recipe.category}}">
+                                <option value="" disabled selected>{{recipe.required_tools}}</option>
+                                {% for tool in required_tools %}
+                                <option id="{{tool.name}}">{{tool.name}}</option>
                                 {% endfor %}
-                                </select>
-                          
+                            </select>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -154,24 +60,103 @@
                     </div>
                 </div>
             </div>
-            </div>
-
-<!--Update/Cancel Buttons-->       
-        <div class="row buttons_edit_page">
-        
+        </div>
+        <!--Source Input-->
+        <div class="row">
+            <div class="col-md-6">
                 <div class="form-group">
-                <button class="btn waves-effect waves-light form_buttons" type="submit" name="action">Update
-                </button>
+                    <label for="source">Source:</label>
+                    <input id="source" name="source" type="text" class="validate text_field" value="{{recipe.source}}" />
                 </div>
-            </div>    
-    </form>
-    </div>
-    <div class="container-fluid">  
-        <div class="row buttons_edit_page">
-            <div class="col-md-12">
-                        <a class="btn waves-effect waves-light form_buttons" href="{{url_for('main_page')}}">Cancel
-                        </a>
+            </div>
+            <!--Cooking Time Input-->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="cooking_time">Cooking Time:</label>
+                    <input id="cooking_time" name="cooking_time" type="text" class="validate text_field" value="{{recipe.cooking_time}}" />
+                </div>
             </div>
         </div>
+        <!--Category Input-->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row category_label">
+                    <p>Category: {{recipe.category}}</p>
+                    <button class="btn waves-effect waves-light btn-outline-secondary list_buttons" type="button" data-toggle="modal" data-target="#category_modal">Edit</button>
+                </div>
+            </div>
+            <!--Category Modal -->
+            <div class="modal fade" id="category_modal" tabindex="-1" role="dialog" aria-labelledby="category_modal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="category_modal">Choose a Category</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <select class="select1" id="category" name="category" value="{{recipe.category}}">
+                                <option value="" disabled selected>{{recipe.category}}</option>
+                                {% for category in categories %}
+                                <option id="{{category.title}}">{{category.title}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary form_buttons">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Sub-Category Input-->
+            <div class="col-md-6">
+                <div class="row category_label">
+                    <p>Main Ingredient: {{recipe.sub_category}}</p>
+                    <button class="btn waves-effect waves-light btn-outline-secondary list_buttons" type="button" data-toggle="modal" data-target="#sub_category_modal">Edit</button>
+                </div>
+            </div>
+            <!-- Sub- Category Modal -->
+            <div class="modal fade" id="sub_category_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="sub_category_modal">Choose a Main Ingredient</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <select class="select1" id="sub_category" name="sub_category" value="{{recipe.sub_category}}">
+                                <option value="{{recipe.sub_category}}" disabled selected> {{recipe.sub_category}}</option>
+                                {% for sub_category in sub_categories %}
+                                <option id="{{sub_category.title}}">{{sub_category.title}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary form_buttons">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Update/Cancel Buttons-->
+        <div class="row buttons_edit_page">
+            <div class="form-group">
+                <button class="btn waves-effect waves-light form_buttons" type="submit" name="action">Update</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="container-fluid">
+    <div class="row buttons_edit_page">
+        <div class="col-md-12">
+            <a class="btn waves-effect waves-light form_buttons" href="{{url_for('main_page')}}">Cancel </a>
+        </div>
     </div>
+</div>
 {% endblock %}

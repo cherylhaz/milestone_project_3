@@ -1,96 +1,93 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <h3 id="add_recipe_title">Add New Recipe</h3>
 <!--Form -->
 <div class="container-fluid">
-<form action="{{url_for('insert_recipe')}}" method="POST" class="add_recipe_form">
- <!-- Title and Ingredients-->
-  <div class="row">
-  <div class="col-md-6">
-  <div class="form-group">
-  <label for="title">Recipe Title:</label>
-            <input id="title" name="title" type="text" class="validate text_field" required>   
-  </div>
-  </div>
-  
-  <div class="col-md-6">
-    <div class="form-group">
-    <label for="ingredients">Ingredients:</label>
-           <input id="ingredients" name="ingredients" type="text" class="validate text_field" required>
-  </div>
-  </div>
-  </div>
-  <!-- Method and Required Tools-->
-  <div class="row">
-  <div class="col-md-6">
-<div class="form-group">
-<label for="method">Method:</label>
-            <input id="method" name="method" type="text" class="validate text_field method" required >
-          </div>
-        </div> 
-        
-        <div class="col-md-6">
-  <div class="form-group">
-    <label for="required_tools">Required Tools:</label>
-        <select id="required_tools" name="required_tools" class="form-control" multiple>   
-            <option value="" disabled selected>Choose all that apply</option>               
-                {% for tool in required_tools %}
-                    <option value="{{tool.name}}">{{tool.name}}</option>
-                {% endfor %}
-     </select>
-  </div>
-  </div>
-  </div> 
-  <!-- Source and Cooking Time-->
-  <div class="row">
-  <div class="col-md-6">
-<div class="form-group">
-    <label for="source">Source:</label>
-    <input id="source" name="source" type="text" class="validate text_field">
+    <form action="{{url_for('insert_recipe')}}" method="POST" class="add_recipe_form">
+        <!-- Title and Ingredients-->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="title">Recipe Title:</label>
+                    <input id="title" name="title" type="text" class="validate text_field" required />
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="ingredients">Ingredients:</label>
+                    <input id="ingredients" name="ingredients" type="text" class="validate text_field" required />
+                </div>
+            </div>
+        </div>
+        <!-- Method and Required Tools-->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="method">Method:</label>
+                    <input id="method" name="method" type="text" class="validate text_field method" required />
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="required_tools">Required Tools:</label>
+                    <select id="required_tools" name="required_tools" class="form-control" multiple>
+                        <option value="" disabled selected>Choose all that apply</option>
+                        {% for tool in required_tools %}
+                        <option value="{{tool.name}}">{{tool.name}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- Source and Cooking Time-->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="source">Source:</label>
+                    <input id="source" name="source" type="text" class="validate text_field" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="cooking_time">Cooking Time:</label>
+                    <input id="cooking_time" name="cooking_time" type="text" class="validate text_field" required />
+                </div>
+            </div>
+        </div>
+        <!-- Category and Sub-Category-->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Category</label>
+                    <select class="form-control" id="category" name="category" required>
+                        <option value="" disabled selected>Choose most suitable option:</option>
+                        {% for category in categories %}
+                        <option value="{{category.title}}">{{category.title}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Main Ingredient:</label>
+                    <select class="form-control" id="sub_category" name="sub_category">
+                        <option value="" disabled selected>Choose most suitable option: </option>
+                        {% for sub_category in sub_categories %}
+                        <option value="{{sub_category.title}}">{{sub_category.title}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- Buttons-->
+        <div class="row">
+            <div id="button_add_page">
+                <button class="btn waves-effect waves-light form_buttons" id="add_button" type="submit" name="action">Add</button>
+            </div>
+        </div>
+    </form>
 </div>
-</div>
-<div class="col-md-6">
-<div class="form-group">
-    <label for="cooking_time">Cooking Time:</label>
-    <input id="cooking_time" name="cooking_time" type="text" class="validate text_field" required>     
-</div>
-</div>
-</div>
-<!-- Category and Sub-Category-->
-<div class="row">
-<div class="col-md-6">
-  <div class="form-group">
-  <label>Category</label>
-              <select class="form-control" id="category" name="category" required>
-                <option value="" disabled selected>Choose most suitable option:</option>
-                {% for category in categories %}
-                     <option value="{{category.title}}">{{category.title}}</option>
-                {% endfor %}
-            </select>
-  </div>
-  </div>
-  <div class="col-md-6">
-<div class="form-group">
-    <label>Main Ingredient:</label>
-    <select class="form-control" id="sub_category" name="sub_category">
-                            <option value="" disabled selected>Choose most suitable option: </option>
-                            {% for sub_category in sub_categories %}
-                                <option value="{{sub_category.title}}">{{sub_category.title}}</option>
-                            {% endfor %}
-                            </select>
-                            
-</div>
-</div>
-</div>
-<!-- Buttons-->
-<div class="row">
-<div id="button_add_page">
-    <button class="btn waves-effect waves-light form_buttons " id="add_button" type="submit" name="action">Add
-  </button>
-</div>
-</div>
-  </form>
-  </div>
-  
+
 {% endblock %}
