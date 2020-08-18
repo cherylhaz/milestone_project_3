@@ -64,12 +64,12 @@ Mockups were completed using Balsamiq Mockups 3 and can be viewed [here](./stati
 The Navbar is located at the top to easily move around the site and to access all other parts of the site.  The feature is mobile
 friendly.  
 
-**[Search by Category Page]()**  
+**Search by Category Page**  
 The main page or search page is divided by category and allows the user to easily find the recipes they are looking for broken down by meal.
 Typically when searching for recipes you are looking for a dessert to make or something for dinner.  This is the easiest way to divide the recipes for easiest access for the user.
 The features left to implement section describes additional search capability that would be added in the future. 
 
-**[Add Recipe]()**  
+**Add Recipe**  
 This page was kept simple and straightforward on purpose so it would appeal to a large number of users.
 Only title, ingredients, method, cooking time and category are required fields so that entering a recipe is not overly cumbersome. 
 
@@ -102,16 +102,25 @@ Future enhancements would include:
 **[Bootstrap](https://getbootstrap.com/)**  
 Used for the framework of the site, including the layout, the forms, modals, navbar, footers.
 
+**[Gitpod](https://www.gitpod.io/)**  
+The creating platform, hosting the workspace where the site was created.
+
+**[Github](https://github.com/)**  
+Used to house the repository and create the backup and save copies of all the work.
+
 **[MongoDB](https://www.mongodb.com/)**  
 Hosts the database for the project. 
 
+**[Heroku](https://id.heroku.com/login)**  
+The project was deployed using this service.
+
 **[Canva](https://www.canva.com/)**  
-Is a free website and was used for the logo creation. 
+Used for the logo creation. 
 
 **Code Beautifiers**  
 To ensure code was properly presented:  
-[CSS](https://www.freeformatter.com/css-beautifier.html)  
-[HTML](https://webformatter.com/html)
+[CSS- Free Formatter](https://www.freeformatter.com/css-beautifier.html)  
+[HTML- Web Formatter](https://webformatter.com/html)
 
 ## Testing
 All HTML code was put through [Nu HTML Checker](https://validator.w3.org/nu/) to catch any errors.  
@@ -144,14 +153,19 @@ The page works and looks attractive at all screen sizes.
 ## Deployment
 The project is deployed at https://recipe-box-chaze.herokuapp.com/ 
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+It was depoloyed on August 17.
+The app was set up on Heroku, then the Procfile and requirements.txt file were created. The workspace was linked to Heroku.
+Config Variables including IP, PORT and MongdoDB were added.  The repository and the Heroku app were then linked.
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
+**To Run Page Locally**  
+You will need to install the following:   
++ dnspython  
++ Flask  
++ Flask-PyMongo  
++ pymongo  
 
-Different values for environment variables (Heroku Config Vars)?
-Different configuration files?
-Separate git branch?
-In addition, if it is not obvious, you should also describe how to run your code locally.
+Then run the app.py file.  MongoDB login credientials will be needed and can be obtained by contacting me directly.
+
 
 ## Credits
 ### Content & Media
